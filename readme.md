@@ -126,4 +126,4 @@ There are also examples on how to run the processing on KITTI data and on ROS
 input. Follow the `--help` output of each of the examples for more details.
 
 Also you can load the data from the GUI. Make sure you are loading files with
-correct extension (`*.txt` and `*.bin` for KITTI, `*.png` for Moosmann's data).
+correct extension (i.e., `*.txt` and `*.bin` for KITTI).
