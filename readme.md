@@ -41,7 +41,7 @@ pipenv shell --fancy      # start a virtual environment
 pip install catkin-tools  # install catkin-tools for building
 mkdir src                 # create src dir if you don't have it already
 # Now you just need to clone the repo:
-git clone https://github.com/PRBonn/depth_clustering src/depth_clustering
+git clone https://github.com/yiyihan/depthcluster_ground
 ```
 
 ### System requirements ###
@@ -100,17 +100,6 @@ segments to disk. The examples should be easy to tweak for your needs.
 Go to folder with binaries:
 ```
 cd <path_to_project>/build/devel/lib/depth_clustering
-```
-
-#### Frank Moosmann's "Velodyne SLAM" Dataset ####
-Get the data:
-```
-mkdir data/; wget http://www.mrt.kit.edu/z/publ/download/velodyneslam/data/scenario1.zip -O data/moosmann.zip; unzip data/moosmann.zip -d data/; rm data/moosmann.zip
-```
-
-Run a binary to show detected objects:
-```
-./show_objects_moosmann --path data/scenario1/
 ```
 
 Alternatively, you can run the data from Qt GUI (as in video):
