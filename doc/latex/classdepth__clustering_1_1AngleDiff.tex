@@ -1,0 +1,117 @@
+\hypertarget{classdepth__clustering_1_1AngleDiff}{}\doxysection{depth\+\_\+clustering\+::Angle\+Diff Class Reference}
+\label{classdepth__clustering_1_1AngleDiff}\index{depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}}
+
+
+Class for angle difference.  
+
+
+
+
+{\ttfamily \#include $<$angle\+\_\+diff.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdepth__clustering_1_1AngleDiff_a40371150bff3a10dd8ce40788b9bd160}{Angle\+Diff}} (const cv\+::\+Mat $\ast$source\+\_\+image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Precompute the angles to avoid losing time on that. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classdepth__clustering_1_1AngleDiff_ac9bd0ec61ff0b213fd19235dc171c1c2}{Diff\+At}} (const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&from, const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&to) const override
+\begin{DoxyCompactList}\small\item\em Compute angle-\/based difference. See paper for details. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiff_ac65e8f42b1f2ac82db14ebe188c004a2}\label{classdepth__clustering_1_1AngleDiff_ac65e8f42b1f2ac82db14ebe188c004a2}} 
+bool \mbox{\hyperlink{classdepth__clustering_1_1AngleDiff_ac65e8f42b1f2ac82db14ebe188c004a2}{Satisfies\+Threshold}} (float angle, float threshold) const override
+\begin{DoxyCompactList}\small\item\em Threshold is satisfied if angle is B\+I\+G\+G\+ER than threshold. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1AngleDiff_a462e4aadd35ca06e9b061d08c9787074}{Visualize}} () const override
+\begin{DoxyCompactList}\small\item\em Visualize $\beta$ angles as a {\ttfamily cv\+::\+Mat} color image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for angle difference. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Angle\+Diff\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classdepth__clustering_1_1AngleDiff__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Angle\+Diff\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classdepth__clustering_1_1AngleDiff__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiff_a40371150bff3a10dd8ce40788b9bd160}\label{classdepth__clustering_1_1AngleDiff_a40371150bff3a10dd8ce40788b9bd160}} 
+\index{depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}!AngleDiff@{AngleDiff}}
+\index{AngleDiff@{AngleDiff}!depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}}
+\doxysubsubsection{\texorpdfstring{AngleDiff()}{AngleDiff()}}
+{\footnotesize\ttfamily depth\+\_\+clustering\+::\+Angle\+Diff\+::\+Angle\+Diff (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat $\ast$}]{source\+\_\+image,  }\item[{const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+
+Precompute the angles to avoid losing time on that. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em source\+\_\+image} & The source image \\
+\hline
+\mbox{\texttt{ in}}  & {\em params} & The projection parameters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiff_ac9bd0ec61ff0b213fd19235dc171c1c2}\label{classdepth__clustering_1_1AngleDiff_ac9bd0ec61ff0b213fd19235dc171c1c2}} 
+\index{depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}!DiffAt@{DiffAt}}
+\index{DiffAt@{DiffAt}!depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}}
+\doxysubsubsection{\texorpdfstring{DiffAt()}{DiffAt()}}
+{\footnotesize\ttfamily float depth\+\_\+clustering\+::\+Angle\+Diff\+::\+Diff\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{from,  }\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute angle-\/based difference. See paper for details. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Pixel from which to compute difference \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Pixel to which to compute difference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle difference between the values 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff_a06ba188d8d83d0e4bad66c833656c26d}{depth\+\_\+clustering\+::\+Abstract\+Diff}}.
+
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiff_a462e4aadd35ca06e9b061d08c9787074}\label{classdepth__clustering_1_1AngleDiff_a462e4aadd35ca06e9b061d08c9787074}} 
+\index{depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}!Visualize@{Visualize}}
+\index{Visualize@{Visualize}!depth\_clustering::AngleDiff@{depth\_clustering::AngleDiff}}
+\doxysubsubsection{\texorpdfstring{Visualize()}{Visualize()}}
+{\footnotesize\ttfamily cv\+::\+Mat depth\+\_\+clustering\+::\+Angle\+Diff\+::\+Visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Visualize $\beta$ angles as a {\ttfamily cv\+::\+Mat} color image. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily cv\+::\+Mat} color image with red channel showing $\beta$ angles in row direction and green channel in col direction. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff_a45314bf711f35e53590af28bdfc45313}{depth\+\_\+clustering\+::\+Abstract\+Diff}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/diff\+\_\+helpers/angle\+\_\+diff.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/diff\+\_\+helpers/angle\+\_\+diff.\+cpp\end{DoxyCompactItemize}

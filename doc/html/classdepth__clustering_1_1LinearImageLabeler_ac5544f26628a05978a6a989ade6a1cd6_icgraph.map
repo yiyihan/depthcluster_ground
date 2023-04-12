@@ -1,0 +1,4 @@
+<map id="depth_clustering::LinearImageLabeler::LabelOneComponent" name="depth_clustering::LinearImageLabeler::LabelOneComponent">
+<area shape="rect" id="node1" title="Label a single connected component with BFS. Can be done faster if we augment the queue with a hash o..." alt="" coords="252,5,483,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1LinearImageLabeler.html#a987cca7d9daab304af4bcc448bf6de0f" title="Calculates the labels running over the whole image." alt="" coords="5,5,204,47"/>
+</map>

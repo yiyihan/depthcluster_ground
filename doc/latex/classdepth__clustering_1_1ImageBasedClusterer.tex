@@ -1,0 +1,150 @@
+\hypertarget{classdepth__clustering_1_1ImageBasedClusterer}{}\doxysection{depth\+\_\+clustering\+::Image\+Based\+Clusterer$<$ LabelerT $>$ Class Template Reference}
+\label{classdepth__clustering_1_1ImageBasedClusterer}\index{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}}
+
+
+Class for image based clusterer.  
+
+
+
+
+{\ttfamily \#include $<$image\+\_\+based\+\_\+clusterer.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ImageBasedClusterer_a62774a9ad3f50dd9811c2194c99eff7f}\label{classdepth__clustering_1_1ImageBasedClusterer_a62774a9ad3f50dd9811c2194c99eff7f}} 
+using {\bfseries Receiver} = \mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ImageBasedClusterer_abafea1c097279afe4f48134d77bac6c6}\label{classdepth__clustering_1_1ImageBasedClusterer_abafea1c097279afe4f48134d77bac6c6}} 
+using {\bfseries Sender} = \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{Abstract\+Sender}}$<$ std\+::unordered\+\_\+map$<$ uint16\+\_\+t, \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer_a6a8bdd77542e14ee420988ad80579f35}{Image\+Based\+Clusterer}} (Radians angle\+\_\+tollerance=8\+\_\+deg, uint16\+\_\+t min\+\_\+cluster\+\_\+size=100, uint16\+\_\+t max\+\_\+cluster\+\_\+size=25000)
+\begin{DoxyCompactList}\small\item\em Construct an image-\/based clusterer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer_a0dd114829041816d309d6c8f9ff41cad}{Set\+Diff\+Type}} (Diff\+Factory\+::\+Diff\+Type diff\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Sets the difference type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer_a6af0de0dad7450c34c655fb447886716}{Set\+Label\+Image\+Client}} (\mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ cv\+::\+Mat $>$ $\ast$client)
+\begin{DoxyCompactList}\small\item\em Sets the label image client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer_a98e7be00573047a2380ded00bb0542e6}{On\+New\+Object\+Received}} (const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} \&cloud, int) override
+\begin{DoxyCompactList}\small\item\em Gets called when clusterer receives a cloud to cluster. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename LabelerT$>$\newline
+class depth\+\_\+clustering\+::\+Image\+Based\+Clusterer$<$ Labeler\+T $>$}
+
+Class for image based clusterer. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em LabelerT} & A Labeler class to be used for labeling. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Inheritance diagram for depth\+\_\+clustering\+::Image\+Based\+Clusterer$<$ LabelerT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1ImageBasedClusterer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Image\+Based\+Clusterer$<$ LabelerT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1ImageBasedClusterer__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1ImageBasedClusterer_a6a8bdd77542e14ee420988ad80579f35}\label{classdepth__clustering_1_1ImageBasedClusterer_a6a8bdd77542e14ee420988ad80579f35}} 
+\index{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}!ImageBasedClusterer@{ImageBasedClusterer}}
+\index{ImageBasedClusterer@{ImageBasedClusterer}!depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}}
+\doxysubsubsection{\texorpdfstring{ImageBasedClusterer()}{ImageBasedClusterer()}}
+{\footnotesize\ttfamily template$<$typename LabelerT $>$ \\
+\mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer}{depth\+\_\+clustering\+::\+Image\+Based\+Clusterer}}$<$ LabelerT $>$\+::\mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer}{Image\+Based\+Clusterer}} (\begin{DoxyParamCaption}\item[{Radians}]{angle\+\_\+tollerance = {\ttfamily 8\+\_\+deg},  }\item[{uint16\+\_\+t}]{min\+\_\+cluster\+\_\+size = {\ttfamily 100},  }\item[{uint16\+\_\+t}]{max\+\_\+cluster\+\_\+size = {\ttfamily 25000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct an image-\/based clusterer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em angle\+\_\+tollerance} & The angle tollerance to separate objects \\
+\hline
+\mbox{\texttt{ in}}  & {\em min\+\_\+cluster\+\_\+size} & The minimum cluster size to send \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+cluster\+\_\+size} & The maximum cluster size to send \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1ImageBasedClusterer_a98e7be00573047a2380ded00bb0542e6}\label{classdepth__clustering_1_1ImageBasedClusterer_a98e7be00573047a2380ded00bb0542e6}} 
+\index{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}!OnNewObjectReceived@{OnNewObjectReceived}}
+\index{OnNewObjectReceived@{OnNewObjectReceived}!depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}}
+\doxysubsubsection{\texorpdfstring{OnNewObjectReceived()}{OnNewObjectReceived()}}
+{\footnotesize\ttfamily template$<$typename LabelerT $>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer}{depth\+\_\+clustering\+::\+Image\+Based\+Clusterer}}$<$ LabelerT $>$\+::On\+New\+Object\+Received (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} \&}]{cloud,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets called when clusterer receives a cloud to cluster. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cloud} & The cloud to cluster \\
+\hline
+\mbox{\texttt{ in}}  & {\em sender\+\_\+id} & The sender identifier \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{depth\+\_\+clustering\+::\+Abstract\+Client$<$ Cloud $>$}}.
+
+\mbox{\Hypertarget{classdepth__clustering_1_1ImageBasedClusterer_a0dd114829041816d309d6c8f9ff41cad}\label{classdepth__clustering_1_1ImageBasedClusterer_a0dd114829041816d309d6c8f9ff41cad}} 
+\index{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}!SetDiffType@{SetDiffType}}
+\index{SetDiffType@{SetDiffType}!depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}}
+\doxysubsubsection{\texorpdfstring{SetDiffType()}{SetDiffType()}}
+{\footnotesize\ttfamily template$<$typename LabelerT $>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer}{depth\+\_\+clustering\+::\+Image\+Based\+Clusterer}}$<$ LabelerT $>$\+::Set\+Diff\+Type (\begin{DoxyParamCaption}\item[{Diff\+Factory\+::\+Diff\+Type}]{diff\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the difference type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em diff\+\_\+type} & The difference type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdepth__clustering_1_1ImageBasedClusterer_a6af0de0dad7450c34c655fb447886716}\label{classdepth__clustering_1_1ImageBasedClusterer_a6af0de0dad7450c34c655fb447886716}} 
+\index{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}!SetLabelImageClient@{SetLabelImageClient}}
+\index{SetLabelImageClient@{SetLabelImageClient}!depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$@{depth\_clustering::ImageBasedClusterer$<$ LabelerT $>$}}
+\doxysubsubsection{\texorpdfstring{SetLabelImageClient()}{SetLabelImageClient()}}
+{\footnotesize\ttfamily template$<$typename LabelerT $>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1ImageBasedClusterer}{depth\+\_\+clustering\+::\+Image\+Based\+Clusterer}}$<$ LabelerT $>$\+::Set\+Label\+Image\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ cv\+::\+Mat $>$ $\ast$}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the label image client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The client to receive color images with labels \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/clusterers/image\+\_\+based\+\_\+clusterer.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="depth_clustering::CloudOdomRosSubscriber::Callback" name="depth_clustering::CloudOdomRosSubscriber::Callback">
+<area shape="rect" id="node1" title="Get synchronized odometry and cloud." alt="" coords="5,13,200,54"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1AbstractSender.html#a147752e5ab7ca15da9c8d8e60575390b" title="Shares data with everyone who listens to it." alt="" coords="248,5,467,61"/>
+</map>

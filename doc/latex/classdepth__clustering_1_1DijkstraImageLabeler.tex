@@ -1,0 +1,64 @@
+\hypertarget{classdepth__clustering_1_1DijkstraImageLabeler}{}\doxysection{depth\+\_\+clustering\+::Dijkstra\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$ Class Template Reference}
+\label{classdepth__clustering_1_1DijkstraImageLabeler}\index{depth\_clustering::DijkstraImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::DijkstraImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+
+
+Label image with Dijkstra. Slower, then linear.  
+
+
+
+
+{\ttfamily \#include $<$dijkstra\+\_\+image\+\_\+labeler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DijkstraImageLabeler_ac852e1ee20615b3ba62b31a090157cdd}\label{classdepth__clustering_1_1DijkstraImageLabeler_ac852e1ee20615b3ba62b31a090157cdd}} 
+{\bfseries Dijkstra\+Image\+Labeler} (const cv\+::\+Mat \&depth\+\_\+image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params, const Radians \&angle\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DijkstraImageLabeler_a949206a2cfbf234bb523c0a1bc0fc3ba}\label{classdepth__clustering_1_1DijkstraImageLabeler_a949206a2cfbf234bb523c0a1bc0fc3ba}} 
+void \mbox{\hyperlink{classdepth__clustering_1_1DijkstraImageLabeler_a949206a2cfbf234bb523c0a1bc0fc3ba}{Compute\+Labels}} (Diff\+Factory\+::\+Diff\+Type diff\+\_\+type) override
+\begin{DoxyCompactList}\small\item\em An interface for children to compute labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DijkstraImageLabeler_ae7c58a8b42e1f17b76e3b48e610a1195}\label{classdepth__clustering_1_1DijkstraImageLabeler_ae7c58a8b42e1f17b76e3b48e610a1195}} 
+std\+::array$<$ Pixel\+Coord, N\+E\+I\+G\+H\+\_\+\+S\+I\+ZE $>$ {\bfseries Neighborhood}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DijkstraImageLabeler_a3a1f1c3b1eac8cb71ff04b9d6cc58ea3}\label{classdepth__clustering_1_1DijkstraImageLabeler_a3a1f1c3b1eac8cb71ff04b9d6cc58ea3}} 
+static constexpr int16\+\_\+t {\bfseries N\+E\+I\+G\+H\+\_\+\+S\+I\+ZE} = 2 $\ast$ S\+T\+E\+P\+\_\+\+R\+OW + 2 $\ast$ S\+T\+E\+P\+\_\+\+C\+OL
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$\newline
+class depth\+\_\+clustering\+::\+Dijkstra\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+O\+W, S\+T\+E\+P\+\_\+\+C\+O\+L $>$}
+
+Label image with Dijkstra. Slower, then linear. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Dijkstra\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classdepth__clustering_1_1DijkstraImageLabeler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Dijkstra\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1DijkstraImageLabeler__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/dijkstra\+\_\+image\+\_\+labeler.\+h\end{DoxyCompactItemize}

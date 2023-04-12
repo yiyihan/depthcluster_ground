@@ -1,0 +1,4 @@
+<map id="depth_clustering::DijkstraImageLabeler&lt; STEP_ROW, STEP_COL &gt;" name="depth_clustering::DijkstraImageLabeler&lt; STEP_ROW, STEP_COL &gt;">
+<area shape="rect" id="node1" title="Label image with Dijkstra. Slower, then linear." alt="" coords="5,277,195,428"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1AbstractImageLabeler.html" title="Class for abstract image labeler." alt="" coords="11,5,189,229"/>
+</map>

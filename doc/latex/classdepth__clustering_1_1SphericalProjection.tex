@@ -1,0 +1,98 @@
+\hypertarget{classdepth__clustering_1_1SphericalProjection}{}\doxysection{depth\+\_\+clustering\+::Spherical\+Projection Class Reference}
+\label{classdepth__clustering_1_1SphericalProjection}\index{depth\_clustering::SphericalProjection@{depth\_clustering::SphericalProjection}}
+
+
+Class for spherical projection.  
+
+
+
+
+{\ttfamily \#include $<$spherical\+\_\+projection.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1SphericalProjection_a75afccfd4b59cfc1291f6475faf25e30}\label{classdepth__clustering_1_1SphericalProjection_a75afccfd4b59cfc1291f6475faf25e30}} 
+{\bfseries Spherical\+Projection} (const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&projection\+\_\+params)
+\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1SphericalProjection_ab80cb1d72f60e7a887affa0ab10ebc03}{Init\+From\+Points}} (const Rich\+Point\+::\+Aligned\+Vector \&points) override
+\begin{DoxyCompactList}\small\item\em Generate projection from points. \end{DoxyCompactList}\item 
+Cloud\+Projection\+::\+Ptr \mbox{\hyperlink{classdepth__clustering_1_1SphericalProjection_a1b7870502497310666b2909701906470}{Clone}} () const override
+\begin{DoxyCompactList}\small\item\em Polymorphic clone of a projection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for spherical projection. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Spherical\+Projection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classdepth__clustering_1_1SphericalProjection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Spherical\+Projection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1SphericalProjection__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1SphericalProjection_a1b7870502497310666b2909701906470}\label{classdepth__clustering_1_1SphericalProjection_a1b7870502497310666b2909701906470}} 
+\index{depth\_clustering::SphericalProjection@{depth\_clustering::SphericalProjection}!Clone@{Clone}}
+\index{Clone@{Clone}!depth\_clustering::SphericalProjection@{depth\_clustering::SphericalProjection}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily Cloud\+Projection\+::\+Ptr depth\+\_\+clustering\+::\+Spherical\+Projection\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Polymorphic clone of a projection. 
+
+\begin{DoxyReturn}{Returns}
+Shared pointer of a copy of this object. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1CloudProjection_ae06ff9699c1a37c535b39fa6f722fa2e}{depth\+\_\+clustering\+::\+Cloud\+Projection}}.
+
+\mbox{\Hypertarget{classdepth__clustering_1_1SphericalProjection_ab80cb1d72f60e7a887affa0ab10ebc03}\label{classdepth__clustering_1_1SphericalProjection_ab80cb1d72f60e7a887affa0ab10ebc03}} 
+\index{depth\_clustering::SphericalProjection@{depth\_clustering::SphericalProjection}!InitFromPoints@{InitFromPoints}}
+\index{InitFromPoints@{InitFromPoints}!depth\_clustering::SphericalProjection@{depth\_clustering::SphericalProjection}}
+\doxysubsubsection{\texorpdfstring{InitFromPoints()}{InitFromPoints()}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Spherical\+Projection\+::\+Init\+From\+Points (\begin{DoxyParamCaption}\item[{const Rich\+Point\+::\+Aligned\+Vector \&}]{points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generate projection from points. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em points} & The points \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1CloudProjection_aab5fa3b7362b2c4297bf9b445ccc7ff8}{depth\+\_\+clustering\+::\+Cloud\+Projection}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1SphericalProjection_ab80cb1d72f60e7a887affa0ab10ebc03_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/projections/spherical\+\_\+projection.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/projections/spherical\+\_\+projection.\+cpp\end{DoxyCompactItemize}

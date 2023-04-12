@@ -1,0 +1,4 @@
+<map id="depth_clustering::DepthGroundRemover::RepairDepth" name="depth_clustering::DepthGroundRemover::RepairDepth">
+<area shape="rect" id="node1" title="Repair zeros in the depth image." alt="" coords="273,5,476,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1DepthGroundRemover.html#ab2c3bcc8df6cc70ad5057f5ec3bd074f" title="when someone sends us an object we process it" alt="" coords="5,5,225,47"/>
+</map>

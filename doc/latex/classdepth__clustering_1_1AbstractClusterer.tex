@@ -1,0 +1,96 @@
+\hypertarget{classdepth__clustering_1_1AbstractClusterer}{}\doxysection{depth\+\_\+clustering\+::Abstract\+Clusterer Class Reference}
+\label{classdepth__clustering_1_1AbstractClusterer}\index{depth\_clustering::AbstractClusterer@{depth\_clustering::AbstractClusterer}}
+
+
+Class for abstract clusterer.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+\_\+clusterer.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_a6417b572cb4d8e851fa5bb88eacfdeb4}\label{classdepth__clustering_1_1AbstractClusterer_a6417b572cb4d8e851fa5bb88eacfdeb4}} 
+using {\bfseries Receiver} = \mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_a916148ff0737bb829b47ec704df8e5a4}\label{classdepth__clustering_1_1AbstractClusterer_a916148ff0737bb829b47ec704df8e5a4}} 
+using {\bfseries Sender} = \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{Abstract\+Sender}}$<$ std\+::unordered\+\_\+map$<$ uint16\+\_\+t, \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdepth__clustering_1_1AbstractClusterer_a6be8ef3c30066a96e1efa0f082634ed0}{Abstract\+Clusterer}} (double cluster\+\_\+tollerance=0.\+2, uint16\+\_\+t min\+\_\+cluster\+\_\+size=100, uint16\+\_\+t max\+\_\+cluster\+\_\+size=25000, uint16\+\_\+t skip=10)
+\begin{DoxyCompactList}\small\item\em Construct a clusterer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_ae219f21aefc118debe4fc89dfb0af96a}\label{classdepth__clustering_1_1AbstractClusterer_ae219f21aefc118debe4fc89dfb0af96a}} 
+double {\bfseries \+\_\+cluster\+\_\+tollerance}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_a7057f78c03aa9396850a61a92574f502}\label{classdepth__clustering_1_1AbstractClusterer_a7057f78c03aa9396850a61a92574f502}} 
+uint16\+\_\+t {\bfseries \+\_\+min\+\_\+cluster\+\_\+size}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_ad11f0fd4ec9f7b83e9242d6fbbda0661}\label{classdepth__clustering_1_1AbstractClusterer_ad11f0fd4ec9f7b83e9242d6fbbda0661}} 
+uint16\+\_\+t {\bfseries \+\_\+max\+\_\+cluster\+\_\+size}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_a4cc536460eb6ffb1d13cf2eba8039602}\label{classdepth__clustering_1_1AbstractClusterer_a4cc536460eb6ffb1d13cf2eba8039602}} 
+uint16\+\_\+t {\bfseries \+\_\+skip}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_a951128009a13fde1a391289b359cdad2}\label{classdepth__clustering_1_1AbstractClusterer_a951128009a13fde1a391289b359cdad2}} 
+uint32\+\_\+t {\bfseries \+\_\+counter}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for abstract clusterer. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Abstract\+Clusterer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1AbstractClusterer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Abstract\+Clusterer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1AbstractClusterer__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractClusterer_a6be8ef3c30066a96e1efa0f082634ed0}\label{classdepth__clustering_1_1AbstractClusterer_a6be8ef3c30066a96e1efa0f082634ed0}} 
+\index{depth\_clustering::AbstractClusterer@{depth\_clustering::AbstractClusterer}!AbstractClusterer@{AbstractClusterer}}
+\index{AbstractClusterer@{AbstractClusterer}!depth\_clustering::AbstractClusterer@{depth\_clustering::AbstractClusterer}}
+\doxysubsubsection{\texorpdfstring{AbstractClusterer()}{AbstractClusterer()}}
+{\footnotesize\ttfamily depth\+\_\+clustering\+::\+Abstract\+Clusterer\+::\+Abstract\+Clusterer (\begin{DoxyParamCaption}\item[{double}]{cluster\+\_\+tollerance = {\ttfamily 0.2},  }\item[{uint16\+\_\+t}]{min\+\_\+cluster\+\_\+size = {\ttfamily 100},  }\item[{uint16\+\_\+t}]{max\+\_\+cluster\+\_\+size = {\ttfamily 25000},  }\item[{uint16\+\_\+t}]{skip = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a clusterer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cluster\+\_\+tollerance} & The cluster tollerance \\
+\hline
+\mbox{\texttt{ in}}  & {\em min\+\_\+cluster\+\_\+size} & The minimum cluster size \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+cluster\+\_\+size} & The maximum cluster size \\
+\hline
+\mbox{\texttt{ in}}  & {\em skip} & Only cluster every skip cloud \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/clusterers/abstract\+\_\+clusterer.\+h\end{DoxyCompactItemize}

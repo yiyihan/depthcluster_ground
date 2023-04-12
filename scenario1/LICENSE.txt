@@ -1,0 +1,20 @@
+This dataset can be freely used for any purposes with the following restrictions:
+
+Its redistribution is prohibited, please link to the following website:
+http://www.mrt.kit.edu/z/publ/download/velodyneslam/dataset.html
+
+Authors using this dataset for scientific publications are requested to cite the following work:
+@inproceedings{Moosmann2011IV,
+        Address = {Baden-Baden, Germany},
+        Author = {Frank Moosmann and Christoph Stiller},
+        Booktitle = {Proceedings of the {IEEE} Intelligent Vehicles Symposium},
+        Language = {english},
+        Month = {June},
+        Owner = {moosmann},
+        Pages = {},
+        Title = {Velodyne SLAM},
+        Url = {http://www.mrt.kit.edu/z/publ/download/Moosmann_IV11.pdf},
+        Year = {2011},
+        Bdsk-Url-1 = {http://www.kit.edu/z/publ/download/Moosmann_IV11.pdf}
+}
+

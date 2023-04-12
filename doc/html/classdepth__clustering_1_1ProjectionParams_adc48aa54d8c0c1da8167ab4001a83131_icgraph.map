@@ -1,0 +1,9 @@
+<map id="depth_clustering::ProjectionParams::AngleFromRow" name="depth_clustering::ProjectionParams::AngleFromRow">
+<area shape="rect" id="node1" title="Get angle from row." alt="" coords="576,136,759,177"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1DijkstraImageLabeler.html#a949206a2cfbf234bb523c0a1bc0fc3ba" title="An interface for children to compute labels." alt="" coords="297,5,495,47"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1DepthGroundRemover.html#a29ba07a101794aab322ae3c0671806e0" title="Get line angle." alt="" coords="295,71,497,112"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1AngleDiffPrecomputed.html#a8f333b5196e9dcaa7923f82d362c7281" title="Pre&#45;compute values for angles for all cols and rows." alt="" coords="275,136,517,177"/>
+<area shape="rect" id="node5" href="$classdepth__clustering_1_1LineDistDiffPrecomputed.html#a9e52e2a94d9f92567953a765475d62a0" title="Pre&#45;compute values for angles for all cols and rows." alt="" coords="264,201,528,243"/>
+<area shape="rect" id="node6" href="$classdepth__clustering_1_1CloudProjection.html#ab552ac1dbb56e077679d9f0268c79a44" title="Unproject a point from depth image coordinate." alt="" coords="287,267,505,308"/>
+<area shape="rect" id="node7" href="$classdepth__clustering_1_1RingProjection.html#a16cbf43e541e65560cb282c560b4efa7" title="Unproject a point from depth image coordinate." alt="" coords="5,267,216,308"/>
+</map>

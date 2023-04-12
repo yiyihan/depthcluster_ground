@@ -1,0 +1,304 @@
+\hypertarget{classdepth__clustering_1_1DepthGroundRemover}{}\doxysection{depth\+\_\+clustering\+::Depth\+Ground\+Remover Class Reference}
+\label{classdepth__clustering_1_1DepthGroundRemover}\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+
+
+A class to remove ground based upon depth image.  
+
+
+
+
+{\ttfamily \#include $<$depth\+\_\+ground\+\_\+remover.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_aae9816017a747246c495de41bcece02c}\label{classdepth__clustering_1_1DepthGroundRemover_aae9816017a747246c495de41bcece02c}} 
+{\bfseries Depth\+Ground\+Remover} (const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params, const Radians \&ground\+\_\+remove\+\_\+angle, int window\+\_\+size=5)
+\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_ab2c3bcc8df6cc70ad5057f5ec3bd074f}{On\+New\+Object\+Received}} (const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} \&cloud, const int sender\+\_\+id) override
+\begin{DoxyCompactList}\small\item\em when someone sends us an object we process it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_a81aa3a52c70223555b4f4e1800e05022}{Zero\+Out\+Ground}} (const cv\+::\+Mat \&image, const cv\+::\+Mat \&angle\+\_\+image, const Radians \&threshold) const
+\begin{DoxyCompactList}\small\item\em Zero out all pixels that belong to ground. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a00ce5997c0dd1692c35ff0a28b94b1b1}\label{classdepth__clustering_1_1DepthGroundRemover_a00ce5997c0dd1692c35ff0a28b94b1b1}} 
+cv\+::\+Mat {\bfseries Zero\+Out\+Ground\+B\+FS} (const cv\+::\+Mat \&image, const cv\+::\+Mat \&angle\+\_\+image, const Radians \&threshold, int kernel\+\_\+size) const
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_af533c51a44aad9a56c12445b61b801b9}{Create\+Angle\+Image}} (const cv\+::\+Mat \&depth\+\_\+image)
+\begin{DoxyCompactList}\small\item\em create a help image with angle in radians written for each pixel \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_a2aeaac524f19861b26c171d845f67e2e}{Get\+Savitsky\+Golay\+Kernel}} (int window\+\_\+size) const
+\begin{DoxyCompactList}\small\item\em Get kernel for Savitsky-\/\+Golay filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a7d67b35fdeaa5fc093cbd857b1405481}\label{classdepth__clustering_1_1DepthGroundRemover_a7d67b35fdeaa5fc093cbd857b1405481}} 
+cv\+::\+Mat {\bfseries Get\+Uniform\+Kernel} (int window\+\_\+size, int \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_a6120bda97c12587db40f34ed73b45475}{type}}=C\+V\+\_\+32F) const
+\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_a63b32fa801a13021bf22699525579f8b}{Apply\+Savitsky\+Golay\+Smoothing}} (const cv\+::\+Mat \&column, int window\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Apply Savitsky-\/\+Golay smoothing to a column. \end{DoxyCompactList}\item 
+Radians \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_a29ba07a101794aab322ae3c0671806e0}{Get\+Line\+Angle}} (const cv\+::\+Mat \&depth\+\_\+image, int col, int row\+\_\+curr, int row\+\_\+neigh)
+\begin{DoxyCompactList}\small\item\em Get line angle. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1DepthGroundRemover_a51dd313ed1bdda2188fb3a3fa1c5738e}{Repair\+Depth}} (const cv\+::\+Mat \&no\+\_\+ground\+\_\+image, int step, float depth\+\_\+threshold)
+\begin{DoxyCompactList}\small\item\em Repair zeros in the depth image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_ab44815e8ea8b10abce24faebf8322624}\label{classdepth__clustering_1_1DepthGroundRemover_ab44815e8ea8b10abce24faebf8322624}} 
+cv\+::\+Mat {\bfseries Repair\+Depth} (const cv\+::\+Mat \&depth\+\_\+image)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_ad4ff83331f7ad6a3bbb22ce5356471ed}\label{classdepth__clustering_1_1DepthGroundRemover_ad4ff83331f7ad6a3bbb22ce5356471ed}} 
+\mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} {\bfseries \+\_\+params}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a44a1a7778c4913540c9fd3545671ee96}\label{classdepth__clustering_1_1DepthGroundRemover_a44a1a7778c4913540c9fd3545671ee96}} 
+int {\bfseries \+\_\+window\+\_\+size} = 5
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a6acd966842064c50552cfd3857652cd8}\label{classdepth__clustering_1_1DepthGroundRemover_a6acd966842064c50552cfd3857652cd8}} 
+Radians {\bfseries \+\_\+ground\+\_\+remove\+\_\+angle} = 5\+\_\+deg
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a1d27a305647b5315b1c2a46c4b0a3039}\label{classdepth__clustering_1_1DepthGroundRemover_a1d27a305647b5315b1c2a46c4b0a3039}} 
+float {\bfseries \+\_\+eps} = 0.\+001f
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a5230ebdee643d0e76c86486adf70db5d}\label{classdepth__clustering_1_1DepthGroundRemover_a5230ebdee643d0e76c86486adf70db5d}} 
+int {\bfseries \+\_\+counter} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class to remove ground based upon depth image. 
+
+Given a depth image and image config this class should remove the ground and send the new depth image with no ground further through the pipeline to its clients.
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & projection params \\
+\hline
+\end{DoxyParams}
+
+
+Inheritance diagram for depth\+\_\+clustering\+::Depth\+Ground\+Remover\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1DepthGroundRemover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Depth\+Ground\+Remover\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1DepthGroundRemover__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a63b32fa801a13021bf22699525579f8b}\label{classdepth__clustering_1_1DepthGroundRemover_a63b32fa801a13021bf22699525579f8b}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!ApplySavitskyGolaySmoothing@{ApplySavitskyGolaySmoothing}}
+\index{ApplySavitskyGolaySmoothing@{ApplySavitskyGolaySmoothing}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{ApplySavitskyGolaySmoothing()}{ApplySavitskyGolaySmoothing()}}
+{\footnotesize\ttfamily Mat depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+Apply\+Savitsky\+Golay\+Smoothing (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{column,  }\item[{int}]{window\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Apply Savitsky-\/\+Golay smoothing to a column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & \mbox{[}A column of an angle image\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}a smoothed column\mbox{]} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_a63b32fa801a13021bf22699525579f8b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_a63b32fa801a13021bf22699525579f8b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_af533c51a44aad9a56c12445b61b801b9}\label{classdepth__clustering_1_1DepthGroundRemover_af533c51a44aad9a56c12445b61b801b9}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!CreateAngleImage@{CreateAngleImage}}
+\index{CreateAngleImage@{CreateAngleImage}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{CreateAngleImage()}{CreateAngleImage()}}
+{\footnotesize\ttfamily Mat depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+Create\+Angle\+Image (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{depth\+\_\+image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+create a help image with angle in radians written for each pixel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth\+\_\+image} & \mbox{[}input depth image\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}32 bit float image with angle in radians written in every pixel\mbox{]} 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_af533c51a44aad9a56c12445b61b801b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a29ba07a101794aab322ae3c0671806e0}\label{classdepth__clustering_1_1DepthGroundRemover_a29ba07a101794aab322ae3c0671806e0}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!GetLineAngle@{GetLineAngle}}
+\index{GetLineAngle@{GetLineAngle}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{GetLineAngle()}{GetLineAngle()}}
+{\footnotesize\ttfamily Radians depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+Get\+Line\+Angle (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{depth\+\_\+image,  }\item[{int}]{col,  }\item[{int}]{row\+\_\+curr,  }\item[{int}]{row\+\_\+neigh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get line angle. 
+
+Given two depth values and their angles compute the angle of the line that they spawn in the sensor frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth\+\_\+image} & \mbox{[}32 bit float image\mbox{]} \\
+\hline
+{\em col} & \mbox{[}current column\mbox{]} \\
+\hline
+{\em row\+\_\+curr} & \mbox{[}current row\mbox{]} \\
+\hline
+{\em row\+\_\+neigh} & \mbox{[}neighbor row\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}angle of the line\mbox{]} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_a29ba07a101794aab322ae3c0671806e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a2aeaac524f19861b26c171d845f67e2e}\label{classdepth__clustering_1_1DepthGroundRemover_a2aeaac524f19861b26c171d845f67e2e}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!GetSavitskyGolayKernel@{GetSavitskyGolayKernel}}
+\index{GetSavitskyGolayKernel@{GetSavitskyGolayKernel}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{GetSavitskyGolayKernel()}{GetSavitskyGolayKernel()}}
+{\footnotesize\ttfamily Mat depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+Get\+Savitsky\+Golay\+Kernel (\begin{DoxyParamCaption}\item[{int}]{window\+\_\+size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get kernel for Savitsky-\/\+Golay filter. 
+
+Get a column filter to process an image filled with data with Savitsky-\/\+Golay filter
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+size} & size of the kernel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+column Mat kernel 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_a2aeaac524f19861b26c171d845f67e2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_ab2c3bcc8df6cc70ad5057f5ec3bd074f}\label{classdepth__clustering_1_1DepthGroundRemover_ab2c3bcc8df6cc70ad5057f5ec3bd074f}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!OnNewObjectReceived@{OnNewObjectReceived}}
+\index{OnNewObjectReceived@{OnNewObjectReceived}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{OnNewObjectReceived()}{OnNewObjectReceived()}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+On\+New\+Object\+Received (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} \&}]{cloud,  }\item[{const int}]{sender\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+when someone sends us an object we process it 
+
+receiving a depth image we remove ground from it and send to next recepient
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth\+\_\+image} & 32 bit depth image \\
+\hline
+{\em sender\+\_\+id} & id of the sender \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{depth\+\_\+clustering\+::\+Abstract\+Client$<$ Cloud $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_ab2c3bcc8df6cc70ad5057f5ec3bd074f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a51dd313ed1bdda2188fb3a3fa1c5738e}\label{classdepth__clustering_1_1DepthGroundRemover_a51dd313ed1bdda2188fb3a3fa1c5738e}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!RepairDepth@{RepairDepth}}
+\index{RepairDepth@{RepairDepth}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{RepairDepth()}{RepairDepth()}}
+{\footnotesize\ttfamily cv\+::\+Mat depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+Repair\+Depth (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{no\+\_\+ground\+\_\+image,  }\item[{int}]{step,  }\item[{float}]{depth\+\_\+threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Repair zeros in the depth image. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em depth\+\_\+image} & The depth image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+depth image with repaired values 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1DepthGroundRemover_a51dd313ed1bdda2188fb3a3fa1c5738e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1DepthGroundRemover_a81aa3a52c70223555b4f4e1800e05022}\label{classdepth__clustering_1_1DepthGroundRemover_a81aa3a52c70223555b4f4e1800e05022}} 
+\index{depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}!ZeroOutGround@{ZeroOutGround}}
+\index{ZeroOutGround@{ZeroOutGround}!depth\_clustering::DepthGroundRemover@{depth\_clustering::DepthGroundRemover}}
+\doxysubsubsection{\texorpdfstring{ZeroOutGround()}{ZeroOutGround()}}
+{\footnotesize\ttfamily Mat depth\+\_\+clustering\+::\+Depth\+Ground\+Remover\+::\+Zero\+Out\+Ground (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{image,  }\item[{const cv\+::\+Mat \&}]{angle\+\_\+image,  }\item[{const Radians \&}]{threshold }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Zero out all pixels that belong to ground. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em image} & Input depth image \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle\+\_\+image} & The angle image \\
+\hline
+\mbox{\texttt{ in}}  & {\em threshold} & angle threshold\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+depth image with 0 instead of ground pixels 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/ground\+\_\+removal/depth\+\_\+ground\+\_\+remover.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/ground\+\_\+removal/depth\+\_\+ground\+\_\+remover.\+cpp\end{DoxyCompactItemize}

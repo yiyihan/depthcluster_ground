@@ -1,0 +1,47 @@
+General
+=======
+Throughout the dataset we use a right-handed coodinate system.
+For each Velodyne-frame there is one line in the IMU recodings file.
+
+
+Velodyne-Recordings
+===================
+Each 360° revolution of the Velodyne scanner was stored as 16bit png distance image (scan*.png).
+The scanner turned clockwise, filling the image from the leftmost to the rightmost column, with
+the leftmost and rightmost column being at the back of the vehicle. Note that measurements were
+not corrected for vehicle movement. Thus and due to the physical setup of the laser diods, some
+strange effects can be seen at the cut of the image when the vehicle is turning. As consequence,
+it is best to ignore the 10 leftmost and rightmost columns of the image.
+To convert the pixel values [0..65535] into meters, just divide by 500.
+This results in an effective range of [0..131m].
+Invalid measurements are indicated by zero distance.
+
+To convert the distance values into 3D coordinates, use the setup in "img.cfg".
+The yaw angles (counter-clockwise) are a linear mapping from the image column [0..869]->[180°..-180°]
+The pitch angles are specified for each image row separately.
+
+Data loss
+=========
+Unfortunately, some frames are completely missing and some frames have only partial data. Any algorithm must account for these problems.
+Missing frames can easily be detected by using the timestamps of the IMU recordings.
+Missing data within a frame can be detected by looking for invalid distance reedings.
+
+
+IMU-Recordings
+==============
+These are given in the file "imu.cfg" and denote the position of the center of the cars' rear axis.
+The most important values are:
+latitude[grad]/longitude[grad]/altitude[m]: global positioning
+heading[rad]: from east, couter-clockwise (towards north)
+omega_heading[rad/s]: clockwise!!!
+x[m]: to the front
+y[m]: to the left
+z[m]: up
+
+
+Extrinsic Calibration
+=====================
+The Velodyne scanner was approximately calibrated wrt. the IMU coordinate system (center of rear axis).
+offset_x:     0.79 m to the front
+offset_y:     0 m
+offset_z:     1.73 m upward

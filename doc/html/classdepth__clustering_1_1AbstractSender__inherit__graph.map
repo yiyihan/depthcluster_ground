@@ -1,0 +1,12 @@
+<map id="depth_clustering::AbstractSender&lt; ObjSendType &gt;" name="depth_clustering::AbstractSender&lt; ObjSendType &gt;">
+<area shape="rect" id="node1" title="Class for abstract sender." alt="" coords="357,220,544,429"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1AbstractSender.html" title=" " alt="" coords="252,514,439,723"/>
+<area shape="rect" id="node6" href="$classdepth__clustering_1_1AbstractSender.html" title=" " alt="" coords="468,507,655,731"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1Identifiable.html" title="Class for identifiable." alt="" coords="357,5,545,171"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1CloudOdomRosSubscriber.html" title="Class for cloud odom ros subscriber." alt="" coords="5,795,211,1077"/>
+<area shape="rect" id="node5" href="$classdepth__clustering_1_1DepthGroundRemover.html" title="A class to remove ground based upon depth image." alt="" coords="235,780,455,1092"/>
+<area shape="rect" id="node7" href="$classdepth__clustering_1_1AbstractClusterer.html" title="Class for abstract clusterer." alt="" coords="479,853,654,1019"/>
+<area shape="rect" id="node8" href="$classdepth__clustering_1_1EuclideanClusterer.html" title="Class for euclidean clustering." alt="" coords="261,1156,443,1277"/>
+<area shape="rect" id="node9" href="$classdepth__clustering_1_1ImageBasedClusterer.html" title="Class for image based clusterer." alt="" coords="467,1141,666,1292"/>
+<area shape="rect" id="node10" href="$classdepth__clustering_1_1ImageBasedClusterer.html" title=" " alt="" coords="535,1369,734,1535"/>
+</map>

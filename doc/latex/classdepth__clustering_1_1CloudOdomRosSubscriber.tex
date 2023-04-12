@@ -1,0 +1,157 @@
+\hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber}{}\doxysection{depth\+\_\+clustering\+::Cloud\+Odom\+Ros\+Subscriber Class Reference}
+\label{classdepth__clustering_1_1CloudOdomRosSubscriber}\index{depth\_clustering::CloudOdomRosSubscriber@{depth\_clustering::CloudOdomRosSubscriber}}
+
+
+Class for cloud odom ros subscriber.  
+
+
+
+
+{\ttfamily \#include $<$cloud\+\_\+odom\+\_\+ros\+\_\+subscriber.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a01d66910b5dfe1d1145a8d68645bd7b4}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a01d66910b5dfe1d1145a8d68645bd7b4}} 
+{\bfseries Cloud\+Odom\+Ros\+Subscriber} (ros\+::\+Node\+Handle $\ast$node\+\_\+handle, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params, const std\+::string \&topic\+\_\+clouds, const std\+::string \&topic\+\_\+odom=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1CloudOdomRosSubscriber_a76a7474f1deed190ac2fb57084c4cdb9}{Callback}} (const Point\+Cloud\+T\+::\+Const\+Ptr \&msg\+\_\+cloud, const Odometry\+T\+::\+Const\+Ptr \&msg\+\_\+odom)
+\begin{DoxyCompactList}\small\item\em Get synchronized odometry and cloud. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1CloudOdomRosSubscriber_a8de806bc0b847229dcc92c504908f019}{Callback\+Velodyne}} (const sensor\+\_\+msgs\+::\+Point\+Cloud2\+::\+Const\+Ptr \&msg\+\_\+cloud)
+\begin{DoxyCompactList}\small\item\em Get point cloud from R\+OS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a16020c63b14308591cae6f4a9ba9b29a}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a16020c63b14308591cae6f4a9ba9b29a}} 
+void \mbox{\hyperlink{classdepth__clustering_1_1CloudOdomRosSubscriber_a16020c63b14308591cae6f4a9ba9b29a}{Start\+Listening\+To\+Ros}} ()
+\begin{DoxyCompactList}\small\item\em Starts listening to ros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a2a5fac22f067b9cbfd395814c6939d8a}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a2a5fac22f067b9cbfd395814c6939d8a}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} {\bfseries Ros\+Odom\+To\+Pose} (const Odometry\+T\+::\+Const\+Ptr \&msg)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_ad80bb8e5ba1f5f21221233145337c5eb}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_ad80bb8e5ba1f5f21221233145337c5eb}} 
+Cloud\+::\+Ptr {\bfseries Ros\+Cloud\+To\+Cloud} (const Point\+Cloud\+T\+::\+Const\+Ptr \&msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_af44b4e9d0bfe1c030324ea4600a8d49e}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_af44b4e9d0bfe1c030324ea4600a8d49e}} 
+ros\+::\+Node\+Handle $\ast$ {\bfseries \+\_\+node\+\_\+handle}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a47a509c60650a113d7aba3a36c7a6a17}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a47a509c60650a113d7aba3a36c7a6a17}} 
+message\+\_\+filters\+::\+Subscriber$<$ Point\+CloudT $>$ $\ast$ {\bfseries \+\_\+subscriber\+\_\+clouds}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a869ac4843118077f95777dc483d13873}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a869ac4843118077f95777dc483d13873}} 
+message\+\_\+filters\+::\+Subscriber$<$ OdometryT $>$ $\ast$ {\bfseries \+\_\+subscriber\+\_\+odom}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a4829e587d2ae9c5fee5e3cf753cdeee9}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a4829e587d2ae9c5fee5e3cf753cdeee9}} 
+message\+\_\+filters\+::\+Synchronizer$<$ Approximate\+Time\+Policy $>$ $\ast$ {\bfseries \+\_\+sync}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_ac172f353e2f6fec4d8f07b3a431048a1}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_ac172f353e2f6fec4d8f07b3a431048a1}} 
+std\+::string {\bfseries \+\_\+topic\+\_\+clouds}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_ad1c0dcb17a16f5611d13afb8e76656e5}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_ad1c0dcb17a16f5611d13afb8e76656e5}} 
+std\+::string {\bfseries \+\_\+topic\+\_\+odom}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a0661d98cffa781b355209e71075983b1}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a0661d98cffa781b355209e71075983b1}} 
+\mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} {\bfseries \+\_\+params}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a4d9749a4c49ef4c91807ab2a573e33fe}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a4d9749a4c49ef4c91807ab2a573e33fe}} 
+int {\bfseries \+\_\+msg\+\_\+queue\+\_\+size}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class for cloud odom ros subscriber. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Cloud\+Odom\+Ros\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1CloudOdomRosSubscriber__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Cloud\+Odom\+Ros\+Subscriber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1CloudOdomRosSubscriber__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a76a7474f1deed190ac2fb57084c4cdb9}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a76a7474f1deed190ac2fb57084c4cdb9}} 
+\index{depth\_clustering::CloudOdomRosSubscriber@{depth\_clustering::CloudOdomRosSubscriber}!Callback@{Callback}}
+\index{Callback@{Callback}!depth\_clustering::CloudOdomRosSubscriber@{depth\_clustering::CloudOdomRosSubscriber}}
+\doxysubsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Cloud\+Odom\+Ros\+Subscriber\+::\+Callback (\begin{DoxyParamCaption}\item[{const Point\+Cloud\+T\+::\+Const\+Ptr \&}]{msg\+\_\+cloud,  }\item[{const Odometry\+T\+::\+Const\+Ptr \&}]{msg\+\_\+odom }\end{DoxyParamCaption})}
+
+
+
+Get synchronized odometry and cloud. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+cloud} & The message cloud \\
+\hline
+\mbox{\texttt{ in}}  & {\em msg\+\_\+odom} & The message odom \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1CloudOdomRosSubscriber_a76a7474f1deed190ac2fb57084c4cdb9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1CloudOdomRosSubscriber_a76a7474f1deed190ac2fb57084c4cdb9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1CloudOdomRosSubscriber_a8de806bc0b847229dcc92c504908f019}\label{classdepth__clustering_1_1CloudOdomRosSubscriber_a8de806bc0b847229dcc92c504908f019}} 
+\index{depth\_clustering::CloudOdomRosSubscriber@{depth\_clustering::CloudOdomRosSubscriber}!CallbackVelodyne@{CallbackVelodyne}}
+\index{CallbackVelodyne@{CallbackVelodyne}!depth\_clustering::CloudOdomRosSubscriber@{depth\_clustering::CloudOdomRosSubscriber}}
+\doxysubsubsection{\texorpdfstring{CallbackVelodyne()}{CallbackVelodyne()}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Cloud\+Odom\+Ros\+Subscriber\+::\+Callback\+Velodyne (\begin{DoxyParamCaption}\item[{const sensor\+\_\+msgs\+::\+Point\+Cloud2\+::\+Const\+Ptr \&}]{msg\+\_\+cloud }\end{DoxyParamCaption})}
+
+
+
+Get point cloud from R\+OS. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em msg\+\_\+cloud} & The message cloud \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1CloudOdomRosSubscriber_a8de806bc0b847229dcc92c504908f019_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1CloudOdomRosSubscriber_a8de806bc0b847229dcc92c504908f019_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/ros\+\_\+bridge/cloud\+\_\+odom\+\_\+ros\+\_\+subscriber.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/ros\+\_\+bridge/cloud\+\_\+odom\+\_\+ros\+\_\+subscriber.\+cpp\end{DoxyCompactItemize}

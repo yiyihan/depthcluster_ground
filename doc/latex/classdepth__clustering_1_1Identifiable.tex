@@ -1,0 +1,128 @@
+\hypertarget{classdepth__clustering_1_1Identifiable}{}\doxysection{depth\+\_\+clustering\+::Identifiable Class Reference}
+\label{classdepth__clustering_1_1Identifiable}\index{depth\_clustering::Identifiable@{depth\_clustering::Identifiable}}
+
+
+Class for identifiable.  
+
+
+
+
+{\ttfamily \#include $<$identifiable.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0}{id}} () const
+\begin{DoxyCompactList}\small\item\em Gets current object id. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classdepth__clustering_1_1Identifiable_a3de92b22eb8d77cf80a50998a84ecd8a}{guess\+\_\+class\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Guesses class name from typeid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classdepth__clustering_1_1Identifiable_a7b3be5250a82404765617ba7239041f1}{get\+\_\+current\+\_\+id\+\_\+counter}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current identifier counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Identifiable_a61d070e7b5adbef771d5b4df7b9e2f75}\label{classdepth__clustering_1_1Identifiable_a61d070e7b5adbef771d5b4df7b9e2f75}} 
+static std\+::string {\bfseries Demangle\+Name} (const char $\ast$tname)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Identifiable_a82e9edccdd02896f9bcd2fa829645158}\label{classdepth__clustering_1_1Identifiable_a82e9edccdd02896f9bcd2fa829645158}} 
+const int {\bfseries \+\_\+k\+Id}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Identifiable_ac467cc001b2e67e09a10c7dc0da96c4c}\label{classdepth__clustering_1_1Identifiable_ac467cc001b2e67e09a10c7dc0da96c4c}} 
+static int {\bfseries Unique\+Id\+Counter} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for identifiable. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Identifiable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1Identifiable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Identifiable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classdepth__clustering_1_1Identifiable__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1Identifiable_a7b3be5250a82404765617ba7239041f1}\label{classdepth__clustering_1_1Identifiable_a7b3be5250a82404765617ba7239041f1}} 
+\index{depth\_clustering::Identifiable@{depth\_clustering::Identifiable}!get\_current\_id\_counter@{get\_current\_id\_counter}}
+\index{get\_current\_id\_counter@{get\_current\_id\_counter}!depth\_clustering::Identifiable@{depth\_clustering::Identifiable}}
+\doxysubsubsection{\texorpdfstring{get\_current\_id\_counter()}{get\_current\_id\_counter()}}
+{\footnotesize\ttfamily static int depth\+\_\+clustering\+::\+Identifiable\+::get\+\_\+current\+\_\+id\+\_\+counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Gets the current identifier counter. 
+
+\begin{DoxyReturn}{Returns}
+The current identifier counter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1Identifiable_a3de92b22eb8d77cf80a50998a84ecd8a}\label{classdepth__clustering_1_1Identifiable_a3de92b22eb8d77cf80a50998a84ecd8a}} 
+\index{depth\_clustering::Identifiable@{depth\_clustering::Identifiable}!guess\_class\_name@{guess\_class\_name}}
+\index{guess\_class\_name@{guess\_class\_name}!depth\_clustering::Identifiable@{depth\_clustering::Identifiable}}
+\doxysubsubsection{\texorpdfstring{guess\_class\_name()}{guess\_class\_name()}}
+{\footnotesize\ttfamily virtual std\+::string depth\+\_\+clustering\+::\+Identifiable\+::guess\+\_\+class\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Guesses class name from typeid. 
+
+\begin{DoxyReturn}{Returns}
+Class name as string. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1Identifiable_a3de92b22eb8d77cf80a50998a84ecd8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0}\label{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0}} 
+\index{depth\_clustering::Identifiable@{depth\_clustering::Identifiable}!id@{id}}
+\index{id@{id}!depth\_clustering::Identifiable@{depth\_clustering::Identifiable}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily int depth\+\_\+clustering\+::\+Identifiable\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets current object id. 
+
+\begin{DoxyReturn}{Returns}
+id of the object. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/communication/identifiable.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/communication/identifiable.\+cpp\end{DoxyCompactItemize}

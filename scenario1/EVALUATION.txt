@@ -1,0 +1,9 @@
+The IMU recodings seem not to be precise enough to evaluate SLAM methods.
+
+As this scenario is a loop, I matched the last scan against the first scan.
+Defining the first scan as (yaw=0,pitch=0,roll=0,x=0,y=0,z=0)
+the last scan should have the following pose:
+
+(0.00158466,0.0132776,0.00212353,-2.09242,-0.098135,-0.00780318)
+
+Angles are hereby counter-clockwise, i.e. yaw is positive towards left, pitch downward, roll towards right

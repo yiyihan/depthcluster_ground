@@ -1,0 +1,4 @@
+<map id="depth_clustering::DepthGroundRemover::ApplySavitskyGolaySmoothing" name="depth_clustering::DepthGroundRemover::ApplySavitskyGolaySmoothing">
+<area shape="rect" id="node1" title="Apply Savitsky&#45;Golay smoothing to a column." alt="" coords="5,5,268,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1DepthGroundRemover.html#a2aeaac524f19861b26c171d845f67e2e" title="Get kernel for Savitsky&#45;Golay filter." alt="" coords="316,5,543,47"/>
+</map>

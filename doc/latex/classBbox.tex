@@ -1,0 +1,146 @@
+\hypertarget{classBbox}{}\doxysection{Bbox Class Reference}
+\label{classBbox}\index{Bbox@{Bbox}}
+
+
+Class for bounding box.  
+
+
+
+
+{\ttfamily \#include $<$bbox.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBbox_a5d3657403fc62105d71327d50b753ea0}\label{classBbox_a5d3657403fc62105d71327d50b753ea0}} 
+{\bfseries Bbox} (const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{depth\+\_\+clustering\+::\+Cloud}} \&cloud)
+\item 
+\mbox{\Hypertarget{classBbox_a4aabeabfb52b97da8ce23393d682ca97}\label{classBbox_a4aabeabfb52b97da8ce23393d682ca97}} 
+{\bfseries Bbox} (const Eigen\+::\+Vector3f \&min\+\_\+point, const Eigen\+::\+Vector3f \&max\+\_\+point)
+\item 
+bool \mbox{\hyperlink{classBbox_a6ac93cd8475f5ef8eb4007d8c206b39d}{Intersects}} (const \mbox{\hyperlink{classBbox}{Bbox}} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if this bounding box intersects another one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBbox}{Bbox}} \mbox{\hyperlink{classBbox_a0b8e77b794311da86b4c09ed2919af0f}{Intersect}} (const \mbox{\hyperlink{classBbox}{Bbox}} \&other) const
+\begin{DoxyCompactList}\small\item\em Find the bounding box of the intersection of two boxes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBbox_ac590fb2bfb031f1ac4238455caf357d7}{Move\+By}} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{dc\+::\+Pose}} \&pose)
+\begin{DoxyCompactList}\small\item\em Return volume of the bounding box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBbox_afdb30a48b141d8905d05ef5d27983a71}\label{classBbox_afdb30a48b141d8905d05ef5d27983a71}} 
+float {\bfseries volume} () const
+\item 
+\mbox{\Hypertarget{classBbox_aeea52d94952b3b0d6eb95eb7e9bdfa60}\label{classBbox_aeea52d94952b3b0d6eb95eb7e9bdfa60}} 
+Eigen\+::\+Vector3f {\bfseries center} () const
+\item 
+\mbox{\Hypertarget{classBbox_adbd4cd66414ec9dd99a64dcc7fefa0eb}\label{classBbox_adbd4cd66414ec9dd99a64dcc7fefa0eb}} 
+Eigen\+::\+Vector3f {\bfseries scale} () const
+\item 
+\mbox{\Hypertarget{classBbox_acabe3355373b58b56070fd1ead9fdef7}\label{classBbox_acabe3355373b58b56070fd1ead9fdef7}} 
+const Eigen\+::\+Vector3f \& {\bfseries min\+\_\+point} () const
+\item 
+\mbox{\Hypertarget{classBbox_a9c1593c5debe2ab4d9308d56b4a4fa99}\label{classBbox_a9c1593c5debe2ab4d9308d56b4a4fa99}} 
+const Eigen\+::\+Vector3f \& {\bfseries max\+\_\+point} () const
+\item 
+\mbox{\Hypertarget{classBbox_af31d201dfcf52443564e4a2e028008bd}\label{classBbox_af31d201dfcf52443564e4a2e028008bd}} 
+float {\bfseries Get\+ScaleX} () const
+\item 
+\mbox{\Hypertarget{classBbox_a819de405229a7113aa1f55fc9a5e10a1}\label{classBbox_a819de405229a7113aa1f55fc9a5e10a1}} 
+float {\bfseries Get\+ScaleY} () const
+\item 
+\mbox{\Hypertarget{classBbox_a80b58db650bee5a4ea7cfb6205aeab49}\label{classBbox_a80b58db650bee5a4ea7cfb6205aeab49}} 
+float {\bfseries Get\+ScaleZ} () const
+\item 
+\mbox{\Hypertarget{classBbox_aee6dac16a8833cb9a608a0fdafaf9772}\label{classBbox_aee6dac16a8833cb9a608a0fdafaf9772}} 
+void {\bfseries Update\+Scale\+And\+Center} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBbox_a42eb77afd3b8b1c32869c01ecf073bc3}\label{classBbox_a42eb77afd3b8b1c32869c01ecf073bc3}} 
+static constexpr float {\bfseries W\+R\+O\+N\+G\+\_\+\+V\+O\+L\+U\+ME} = -\/1.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for bounding box. 
+
+Collaboration diagram for Bbox\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classBbox__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBbox_a0b8e77b794311da86b4c09ed2919af0f}\label{classBbox_a0b8e77b794311da86b4c09ed2919af0f}} 
+\index{Bbox@{Bbox}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!Bbox@{Bbox}}
+\doxysubsubsection{\texorpdfstring{Intersect()}{Intersect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBbox}{Bbox}} Bbox\+::\+Intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBbox}{Bbox}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Find the bounding box of the intersection of two boxes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & The other bounding box.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A bounding box of the intersection. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classBbox_a0b8e77b794311da86b4c09ed2919af0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBbox_a6ac93cd8475f5ef8eb4007d8c206b39d}\label{classBbox_a6ac93cd8475f5ef8eb4007d8c206b39d}} 
+\index{Bbox@{Bbox}!Intersects@{Intersects}}
+\index{Intersects@{Intersects}!Bbox@{Bbox}}
+\doxysubsubsection{\texorpdfstring{Intersects()}{Intersects()}}
+{\footnotesize\ttfamily bool Bbox\+::\+Intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBbox}{Bbox}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Check if this bounding box intersects another one. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em other} & The other bounding box.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if intersects, false otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classBbox_a6ac93cd8475f5ef8eb4007d8c206b39d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBbox_ac590fb2bfb031f1ac4238455caf357d7}\label{classBbox_ac590fb2bfb031f1ac4238455caf357d7}} 
+\index{Bbox@{Bbox}!MoveBy@{MoveBy}}
+\index{MoveBy@{MoveBy}!Bbox@{Bbox}}
+\doxysubsubsection{\texorpdfstring{MoveBy()}{MoveBy()}}
+{\footnotesize\ttfamily void Bbox\+::\+Move\+By (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{dc\+::\+Pose}} \&}]{pose }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return volume of the bounding box. 
+
+\begin{DoxyReturn}{Returns}
+Volume of the bounding box. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/bbox.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/bbox.\+cpp\end{DoxyCompactItemize}

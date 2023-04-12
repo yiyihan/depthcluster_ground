@@ -1,0 +1,9 @@
+<map id="depth_clustering::LinearImageLabeler::LabelOneComponent" name="depth_clustering::LinearImageLabeler::LabelOneComponent">
+<area shape="rect" id="node1" title="Label a single connected component with BFS. Can be done faster if we augment the queue with a hash o..." alt="" coords="5,169,236,211"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1LinearImageLabeler.html#abef293e252cf1afcac619f643f376921" title="Gets depth value at pixel." alt="" coords="291,5,451,47"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1AbstractDiff.html#a06ba188d8d83d0e4bad66c833656c26d" title="Gets diff between pixels from and to." alt="" coords="284,71,459,112"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1LinearImageLabeler.html#a4389f0085999f71cc283d6c378a2536a" title="Gets label of a given pixel." alt="" coords="291,136,451,177"/>
+<area shape="rect" id="node5" href="$classdepth__clustering_1_1AbstractDiff.html#a940280569ed86d8f7e95626b1a2312d7" title="Does the difference satisfy a threshold?" alt="" coords="284,201,459,243"/>
+<area shape="rect" id="node6" href="$classdepth__clustering_1_1LinearImageLabeler.html#a4693e920b2245f70206a11e141ddcb8f" title="Sets label of a given pixel." alt="" coords="291,267,451,308"/>
+<area shape="rect" id="node7" href="$classdepth__clustering_1_1LinearImageLabeler.html#a0dcf6253650499df0c723caaefc459c5" title="Wrap columns around image." alt="" coords="289,332,454,373"/>
+</map>

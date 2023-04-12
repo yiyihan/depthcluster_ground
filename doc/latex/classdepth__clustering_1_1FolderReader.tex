@@ -1,0 +1,62 @@
+\hypertarget{classdepth__clustering_1_1FolderReader}{}\doxysection{depth\+\_\+clustering\+::Folder\+Reader Class Reference}
+\label{classdepth__clustering_1_1FolderReader}\index{depth\_clustering::FolderReader@{depth\_clustering::FolderReader}}
+
+
+Reads a folder and can sort the inputs. Not too efficient.  
+
+
+
+
+{\ttfamily \#include $<$folder\+\_\+reader.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_ab4a3a1cf87192b779ada139a1a00c12a}\label{classdepth__clustering_1_1FolderReader_ab4a3a1cf87192b779ada139a1a00c12a}} 
+enum {\bfseries Order} \{ {\bfseries S\+O\+R\+T\+ED}, 
+{\bfseries U\+N\+D\+E\+F\+I\+N\+ED}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_a80ae7f477c0ba4ca20e58e0eff0874b2}\label{classdepth__clustering_1_1FolderReader_a80ae7f477c0ba4ca20e58e0eff0874b2}} 
+{\bfseries Folder\+Reader} (const std\+::string \&folder\+\_\+path, const std\+::string \&ending\+\_\+with, const Order order=Order\+::\+U\+N\+D\+E\+F\+I\+N\+ED)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_a298f7b246759d1d926746e057c9d96a0}\label{classdepth__clustering_1_1FolderReader_a298f7b246759d1d926746e057c9d96a0}} 
+{\bfseries Folder\+Reader} (const std\+::string \&folder\+\_\+path, const std\+::string \&starting\+\_\+with, const std\+::string \&ending\+\_\+with, const Order order=Order\+::\+U\+N\+D\+E\+F\+I\+N\+ED)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_aeb4575a662afa48264fec96f4802db90}\label{classdepth__clustering_1_1FolderReader_aeb4575a662afa48264fec96f4802db90}} 
+std\+::string {\bfseries Get\+Next\+File\+Path} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_a463cb6564efbad7d6b3000775ba93292}\label{classdepth__clustering_1_1FolderReader_a463cb6564efbad7d6b3000775ba93292}} 
+const std\+::vector$<$ std\+::string $>$ \& {\bfseries Get\+All\+File\+Paths} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_af9ed4e41e57050d7859cd066eb841792}\label{classdepth__clustering_1_1FolderReader_af9ed4e41e57050d7859cd066eb841792}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries \+\_\+all\+\_\+paths}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1FolderReader_aa9fae723281ea00040a803fc15a86d5d}\label{classdepth__clustering_1_1FolderReader_aa9fae723281ea00040a803fc15a86d5d}} 
+size\+\_\+t {\bfseries \+\_\+path\+\_\+counter}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads a folder and can sort the inputs. Not too efficient. 
+
+Collaboration diagram for depth\+\_\+clustering\+::Folder\+Reader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classdepth__clustering_1_1FolderReader__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/folder\+\_\+reader.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/folder\+\_\+reader.\+cpp\end{DoxyCompactItemize}

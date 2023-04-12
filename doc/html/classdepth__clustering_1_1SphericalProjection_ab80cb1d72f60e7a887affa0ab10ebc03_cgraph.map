@@ -1,0 +1,7 @@
+<map id="depth_clustering::SphericalProjection::InitFromPoints" name="depth_clustering::SphericalProjection::InitFromPoints">
+<area shape="rect" id="node1" title="Generate projection from points." alt="" coords="5,104,184,145"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1CloudProjection.html#a3bd71fd09ce42208b793d763637a527b" title="Check if where we store data is valid." alt="" coords="239,5,456,47"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1ProjectionParams.html#a76d3be24f6c166bc5567d622e4a4995b" title="Get col number from angle." alt="" coords="256,71,439,112"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1CloudProjection.html#a84476c5e25ccf70876f67622a280ac63" title="Fix systematic error. See notebooks in the repo for details." alt="" coords="232,136,463,177"/>
+<area shape="rect" id="node5" href="$classdepth__clustering_1_1ProjectionParams.html#ac9f61c77accaec1b6b60da0afe2dcf5e" title="Get row number from angle." alt="" coords="256,201,439,243"/>
+</map>

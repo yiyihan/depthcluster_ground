@@ -1,0 +1,4 @@
+<map id="Bbox::Intersect" name="Bbox::Intersect">
+<area shape="rect" id="node1" title="Find the bounding box of the intersection of two boxes." alt="" coords="172,5,283,32"/>
+<area shape="rect" id="node2" href="$classBbox.html#a6ac93cd8475f5ef8eb4007d8c206b39d" title="Check if this bounding box intersects another one." alt="" coords="5,5,124,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="depth_clustering::CloudOdomRosSubscriber::CallbackVelodyne" name="depth_clustering::CloudOdomRosSubscriber::CallbackVelodyne">
+<area shape="rect" id="node1" title="Get point cloud from ROS." alt="" coords="288,5,509,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1CloudOdomRosSubscriber.html#a16020c63b14308591cae6f4a9ba9b29a" title="Starts listening to ros." alt="" coords="5,5,240,47"/>
+</map>

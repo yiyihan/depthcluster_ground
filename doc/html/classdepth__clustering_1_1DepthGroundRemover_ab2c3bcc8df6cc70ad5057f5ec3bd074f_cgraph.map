@@ -1,0 +1,8 @@
+<map id="depth_clustering::DepthGroundRemover::OnNewObjectReceived" name="depth_clustering::DepthGroundRemover::OnNewObjectReceived">
+<area shape="rect" id="node1" title="when someone sends us an object we process it" alt="" coords="5,104,225,145"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1DepthGroundRemover.html#a63b32fa801a13021bf22699525579f8b" title="Apply Savitsky&#45;Golay smoothing to a column." alt="" coords="273,5,536,47"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1DepthGroundRemover.html#af533c51a44aad9a56c12445b61b801b9" title="create a help image with angle in radians written for each pixel" alt="" coords="303,71,506,112"/>
+<area shape="rect" id="node5" href="$classdepth__clustering_1_1DepthGroundRemover.html#a51dd313ed1bdda2188fb3a3fa1c5738e" title="Repair zeros in the depth image." alt="" coords="303,136,506,177"/>
+<area shape="rect" id="node6" href="$classdepth__clustering_1_1AbstractSender.html#a147752e5ab7ca15da9c8d8e60575390b" title="Shares data with everyone who listens to it." alt="" coords="295,202,514,258"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1DepthGroundRemover.html#a2aeaac524f19861b26c171d845f67e2e" title="Get kernel for Savitsky&#45;Golay filter." alt="" coords="584,5,811,47"/>
+</map>

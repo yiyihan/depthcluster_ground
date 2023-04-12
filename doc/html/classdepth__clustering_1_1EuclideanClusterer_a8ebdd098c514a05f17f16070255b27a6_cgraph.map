@@ -1,0 +1,4 @@
+<map id="depth_clustering::EuclideanClusterer::OnNewObjectReceived" name="depth_clustering::EuclideanClusterer::OnNewObjectReceived">
+<area shape="rect" id="node1" title="Gets called when somebody sends this client an object." alt="" coords="5,20,225,61"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1AbstractSender.html#a147752e5ab7ca15da9c8d8e60575390b" title="Shares data with everyone who listens to it." alt="" coords="273,5,460,76"/>
+</map>

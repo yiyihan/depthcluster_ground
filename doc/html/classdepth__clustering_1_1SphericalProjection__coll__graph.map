@@ -1,0 +1,5 @@
+<map id="depth_clustering::SphericalProjection" name="depth_clustering::SphericalProjection">
+<area shape="rect" id="node1" title="Class for spherical projection." alt="" coords="25,991,203,1127"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1CloudProjection.html" title="Abstract class for cloud projection." alt="" coords="5,556,223,941"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1ProjectionParams.html" title="Class for projection parameters." alt="" coords="23,5,205,493"/>
+</map>

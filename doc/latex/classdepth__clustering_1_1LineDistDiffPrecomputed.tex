@@ -1,0 +1,202 @@
+\hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed}{}\doxysection{depth\+\_\+clustering\+::Line\+Dist\+Diff\+Precomputed Class Reference}
+\label{classdepth__clustering_1_1LineDistDiffPrecomputed}\index{depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}}
+
+
+Class for angle difference.  
+
+
+
+
+{\ttfamily \#include $<$line\+\_\+dist\+\_\+diff.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_a035909e1718ad9b54b9b4116bbb6c408}{Line\+Dist\+Diff\+Precomputed}} (const cv\+::\+Mat $\ast$source\+\_\+image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Precompute the angles to avoid losing time on that. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_ac505afaa537656af1bcc342ab1e910c4}{Diff\+At}} (const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&from, const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&to) const override
+\begin{DoxyCompactList}\small\item\em Compute angle-\/based difference. See paper for details. Only one of the following situations is possible\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_ac3ce8196d5e6f49f3e3bdc3e3b32b033}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_ac3ce8196d5e6f49f3e3bdc3e3b32b033}} 
+bool \mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_ac3ce8196d5e6f49f3e3bdc3e3b32b033}{Satisfies\+Threshold}} (float angle, float threshold) const override
+\begin{DoxyCompactList}\small\item\em Threshold is satisfied if angle is B\+I\+G\+G\+ER than threshold. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_a77c9cf3bea954f13cd2fef4f8a182425}{Visualize}} () const
+\begin{DoxyCompactList}\small\item\em Visualize $\beta$ angles as a {\ttfamily cv\+::\+Mat} color image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a9e52e2a94d9f92567953a765475d62a0}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a9e52e2a94d9f92567953a765475d62a0}} 
+void \mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_a9e52e2a94d9f92567953a765475d62a0}{Pre\+Compute\+Alpha\+Vecs}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/compute values for angles for all cols and rows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_a9d0211af30be1f60ef4e8db570128a7b}{Pre\+Compute\+Line\+Dists}} ()
+\begin{DoxyCompactList}\small\item\em Precompute all $\beta$ angles for the image. It generates two matrices for row-\/wise and col-\/wise angles. See picture for illustration. The squares store values of angles between pixels with computation direction shown by arrows. Note that the columns matrix wraps around, i.\+e. the last element stores the difference in angles between the last pixel of the original image and the first one. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classdepth__clustering_1_1LineDistDiffPrecomputed_a2725113f6eb03b937104f325adf0c7aa}{Get\+Line\+Dist}} (float alpha, float current\+\_\+depth, float neighbor\+\_\+depth) const
+\begin{DoxyCompactList}\small\item\em Compute the angle $\beta$ of incline of the line spawned by two given beams. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_aeb0f0894cc1f1fcbd9d40813005432f3}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_aeb0f0894cc1f1fcbd9d40813005432f3}} 
+const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$ {\bfseries \+\_\+params} = nullptr
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a5694d6392f56f8659f048f6df7f0ba93}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a5694d6392f56f8659f048f6df7f0ba93}} 
+std\+::vector$<$ float $>$ {\bfseries \+\_\+row\+\_\+alphas}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a0c9b6dc3de39f95b8a76061e94e85505}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a0c9b6dc3de39f95b8a76061e94e85505}} 
+std\+::vector$<$ float $>$ {\bfseries \+\_\+col\+\_\+alphas}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_aa4f24cff932c5d498c01ec71179a5e89}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_aa4f24cff932c5d498c01ec71179a5e89}} 
+cv\+::\+Mat {\bfseries \+\_\+dists\+\_\+row}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_ac0a7cd72ad073091beaefa1d6b3da4a1}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_ac0a7cd72ad073091beaefa1d6b3da4a1}} 
+cv\+::\+Mat {\bfseries \+\_\+dists\+\_\+col}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for angle difference. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Line\+Dist\+Diff\+Precomputed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classdepth__clustering_1_1LineDistDiffPrecomputed__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Line\+Dist\+Diff\+Precomputed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1LineDistDiffPrecomputed__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a035909e1718ad9b54b9b4116bbb6c408}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a035909e1718ad9b54b9b4116bbb6c408}} 
+\index{depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}!LineDistDiffPrecomputed@{LineDistDiffPrecomputed}}
+\index{LineDistDiffPrecomputed@{LineDistDiffPrecomputed}!depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{LineDistDiffPrecomputed()}{LineDistDiffPrecomputed()}}
+{\footnotesize\ttfamily depth\+\_\+clustering\+::\+Line\+Dist\+Diff\+Precomputed\+::\+Line\+Dist\+Diff\+Precomputed (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat $\ast$}]{source\+\_\+image,  }\item[{const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+
+Precompute the angles to avoid losing time on that. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em source\+\_\+image} & The source image \\
+\hline
+\mbox{\texttt{ in}}  & {\em params} & The projection parameters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_ac505afaa537656af1bcc342ab1e910c4}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_ac505afaa537656af1bcc342ab1e910c4}} 
+\index{depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}!DiffAt@{DiffAt}}
+\index{DiffAt@{DiffAt}!depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{DiffAt()}{DiffAt()}}
+{\footnotesize\ttfamily float depth\+\_\+clustering\+::\+Line\+Dist\+Diff\+Precomputed\+::\+Diff\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{from,  }\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute angle-\/based difference. See paper for details. Only one of the following situations is possible\+: 
+
+
+\begin{DoxyItemize}
+\item from.\+row $>$ to.\+row
+\item from.\+row $<$ to.\+row
+\item from.\+col $>$ to.\+col
+\item from.\+col $<$ to.\+col
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Pixel from which to compute difference \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Pixel to which to compute difference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle difference between the values 
+\end{DoxyReturn}
+If one of rows is biggest possible -\/ use it. Otherwise use {\ttfamily std\+::min(from.\+row, to.\+row)}.
+
+If one of cols is biggest possible -\/ use it. Otherwise use {\ttfamily std\+::min(from.\+col, to.\+col)}.
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff_a06ba188d8d83d0e4bad66c833656c26d}{depth\+\_\+clustering\+::\+Abstract\+Diff}}.
+
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a2725113f6eb03b937104f325adf0c7aa}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a2725113f6eb03b937104f325adf0c7aa}} 
+\index{depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}!GetLineDist@{GetLineDist}}
+\index{GetLineDist@{GetLineDist}!depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{GetLineDist()}{GetLineDist()}}
+{\footnotesize\ttfamily float depth\+\_\+clustering\+::\+Line\+Dist\+Diff\+Precomputed\+::\+Get\+Line\+Dist (\begin{DoxyParamCaption}\item[{float}]{alpha,  }\item[{float}]{current\+\_\+depth,  }\item[{float}]{neighbor\+\_\+depth }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the angle $\beta$ of incline of the line spawned by two given beams. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em alpha} & The angle $\alpha$ between the beams. \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+depth} & The reading of the first beam in meters. \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbor\+\_\+depth} & The reading of the second beam in meters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle of incidence of the line spawned by endpoints of two given beams. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LineDistDiffPrecomputed_a2725113f6eb03b937104f325adf0c7aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a9d0211af30be1f60ef4e8db570128a7b}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a9d0211af30be1f60ef4e8db570128a7b}} 
+\index{depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}!PreComputeLineDists@{PreComputeLineDists}}
+\index{PreComputeLineDists@{PreComputeLineDists}!depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{PreComputeLineDists()}{PreComputeLineDists()}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Line\+Dist\+Diff\+Precomputed\+::\+Pre\+Compute\+Line\+Dists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Precompute all $\beta$ angles for the image. It generates two matrices for row-\/wise and col-\/wise angles. See picture for illustration. The squares store values of angles between pixels with computation direction shown by arrows. Note that the columns matrix wraps around, i.\+e. the last element stores the difference in angles between the last pixel of the original image and the first one. 
+
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LineDistDiffPrecomputed_a9d0211af30be1f60ef4e8db570128a7b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1LineDistDiffPrecomputed_a77c9cf3bea954f13cd2fef4f8a182425}\label{classdepth__clustering_1_1LineDistDiffPrecomputed_a77c9cf3bea954f13cd2fef4f8a182425}} 
+\index{depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}!Visualize@{Visualize}}
+\index{Visualize@{Visualize}!depth\_clustering::LineDistDiffPrecomputed@{depth\_clustering::LineDistDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{Visualize()}{Visualize()}}
+{\footnotesize\ttfamily cv\+::\+Mat depth\+\_\+clustering\+::\+Line\+Dist\+Diff\+Precomputed\+::\+Visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visualize $\beta$ angles as a {\ttfamily cv\+::\+Mat} color image. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily cv\+::\+Mat} color image with red channel showing $\beta$ angles in row direction and green channel in col direction. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff_a45314bf711f35e53590af28bdfc45313}{depth\+\_\+clustering\+::\+Abstract\+Diff}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/diff\+\_\+helpers/line\+\_\+dist\+\_\+diff.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/diff\+\_\+helpers/line\+\_\+dist\+\_\+diff.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="depth_clustering::ProjectionParams::ColFromAngle" name="depth_clustering::ProjectionParams::ColFromAngle">
+<area shape="rect" id="node1" title="Get col number from angle." alt="" coords="264,39,447,80"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1RingProjection.html#acfda4cfe9a0b80936987691fe44fc79c" title="Initialize from points, that have ring information in them." alt="" coords="5,5,216,47"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1SphericalProjection.html#ab80cb1d72f60e7a887affa0ab10ebc03" title="Generate projection from points." alt="" coords="21,71,200,112"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="depth_clustering::RingProjection::UnprojectPoint" name="depth_clustering::RingProjection::UnprojectPoint">
+<area shape="rect" id="node1" title="Unproject a point from depth image coordinate." alt="" coords="5,39,216,80"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1CloudProjection.html#ab552ac1dbb56e077679d9f0268c79a44" title="Unproject a point from depth image coordinate." alt="" coords="264,39,481,80"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1ProjectionParams.html#aa5cf587adef5383e263a4e9a20de50ff" title="Get angle from col." alt="" coords="529,5,712,47"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1ProjectionParams.html#adc48aa54d8c0c1da8167ab4001a83131" title="Get angle from row." alt="" coords="529,71,712,112"/>
+</map>

@@ -1,0 +1,173 @@
+\hypertarget{classdepth__clustering_1_1AbstractSender}{}\doxysection{depth\+\_\+clustering\+::Abstract\+Sender$<$ Obj\+Send\+Type $>$ Class Template Reference}
+\label{classdepth__clustering_1_1AbstractSender}\index{depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}}
+
+
+Class for abstract sender.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+\_\+sender.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_ab04a328c2cc29a97bc3bba2b696c8786}\label{classdepth__clustering_1_1AbstractSender_ab04a328c2cc29a97bc3bba2b696c8786}} 
+{\bfseries Abstract\+Sender} (Sender\+Type \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_a6120bda97c12587db40f34ed73b45475}{type}}=Sender\+Type\+::\+U\+N\+D\+E\+F\+I\+N\+ED)
+\item 
+const char $\ast$ \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_a6120bda97c12587db40f34ed73b45475}{type}} () const
+\begin{DoxyCompactList}\small\item\em Gets type of sender as string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_aca33c29cca1916fb0a3edd9024a49b51}{Add\+Client}} (\mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ Obj\+Send\+Type $>$ $\ast$client)
+\begin{DoxyCompactList}\small\item\em Adds a client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_a0c33c98abe8fa71a86f02af95b1c71c1}{Remove\+Client}} (int \mbox{\hyperlink{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0}{id}})
+\begin{DoxyCompactList}\small\item\em Removes a client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_ab331127e3e36b15413e1eecf55b5b284}\label{classdepth__clustering_1_1AbstractSender_ab331127e3e36b15413e1eecf55b5b284}} 
+void {\bfseries Remove\+Client} (\mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ Obj\+Send\+Type $>$ $\ast$client)
+\item 
+size\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_a957331eb41f11208bbe6174895c11bf2}{client\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Get number of clients currently subscribed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender_a147752e5ab7ca15da9c8d8e60575390b}{Share\+Data\+With\+All\+Clients}} (const Obj\+Send\+Type \&obj, int \mbox{\hyperlink{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0}{id}}=-\/1)
+\begin{DoxyCompactList}\small\item\em Shares data with everyone who listens to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_adc736ec9622d4baf520c8379a23e65ab}\label{classdepth__clustering_1_1AbstractSender_adc736ec9622d4baf520c8379a23e65ab}} 
+using {\bfseries Id\+Client\+Mapping} = std\+::map$<$ int, \mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ Obj\+Send\+Type $>$ $\ast$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_a5ef5e33f2a4a2821b2eb4285fe85f80e}\label{classdepth__clustering_1_1AbstractSender_a5ef5e33f2a4a2821b2eb4285fe85f80e}} 
+Id\+Client\+Mapping {\bfseries \+\_\+clients}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_a9c837623381f9ec0e26130457286af1a}\label{classdepth__clustering_1_1AbstractSender_a9c837623381f9ec0e26130457286af1a}} 
+Sender\+Type {\bfseries \+\_\+type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Obj\+Send\+Type$>$\newline
+class depth\+\_\+clustering\+::\+Abstract\+Sender$<$ Obj\+Send\+Type $>$}
+
+Class for abstract sender. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Obj\+Send\+Type} & Type of the object to be sent. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Inheritance diagram for depth\+\_\+clustering\+::Abstract\+Sender$<$ Obj\+Send\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1AbstractSender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Abstract\+Sender$<$ Obj\+Send\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classdepth__clustering_1_1AbstractSender__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_aca33c29cca1916fb0a3edd9024a49b51}\label{classdepth__clustering_1_1AbstractSender_aca33c29cca1916fb0a3edd9024a49b51}} 
+\index{depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}!AddClient@{AddClient}}
+\index{AddClient@{AddClient}!depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}}
+\doxysubsubsection{\texorpdfstring{AddClient()}{AddClient()}}
+{\footnotesize\ttfamily template$<$class Obj\+Send\+Type $>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{depth\+\_\+clustering\+::\+Abstract\+Sender}}$<$ Obj\+Send\+Type $>$\+::Add\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdepth__clustering_1_1AbstractClient}{Abstract\+Client}}$<$ Obj\+Send\+Type $>$ $\ast$}]{client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The client to receive the processed data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_a957331eb41f11208bbe6174895c11bf2}\label{classdepth__clustering_1_1AbstractSender_a957331eb41f11208bbe6174895c11bf2}} 
+\index{depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}!client\_count@{client\_count}}
+\index{client\_count@{client\_count}!depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}}
+\doxysubsubsection{\texorpdfstring{client\_count()}{client\_count()}}
+{\footnotesize\ttfamily template$<$class Obj\+Send\+Type $>$ \\
+size\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{depth\+\_\+clustering\+::\+Abstract\+Sender}}$<$ Obj\+Send\+Type $>$\+::client\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get number of clients currently subscribed. 
+
+\begin{DoxyReturn}{Returns}
+Current number of Clients 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_a0c33c98abe8fa71a86f02af95b1c71c1}\label{classdepth__clustering_1_1AbstractSender_a0c33c98abe8fa71a86f02af95b1c71c1}} 
+\index{depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}!RemoveClient@{RemoveClient}}
+\index{RemoveClient@{RemoveClient}!depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveClient()}{RemoveClient()}}
+{\footnotesize\ttfamily template$<$class Obj\+Send\+Type $>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{depth\+\_\+clustering\+::\+Abstract\+Sender}}$<$ Obj\+Send\+Type $>$\+::Remove\+Client (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a client. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & The identifier of the client to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_a147752e5ab7ca15da9c8d8e60575390b}\label{classdepth__clustering_1_1AbstractSender_a147752e5ab7ca15da9c8d8e60575390b}} 
+\index{depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}!ShareDataWithAllClients@{ShareDataWithAllClients}}
+\index{ShareDataWithAllClients@{ShareDataWithAllClients}!depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}}
+\doxysubsubsection{\texorpdfstring{ShareDataWithAllClients()}{ShareDataWithAllClients()}}
+{\footnotesize\ttfamily template$<$class Obj\+Send\+Type $>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{depth\+\_\+clustering\+::\+Abstract\+Sender}}$<$ Obj\+Send\+Type $>$\+::Share\+Data\+With\+All\+Clients (\begin{DoxyParamCaption}\item[{const Obj\+Send\+Type \&}]{obj,  }\item[{int}]{id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Shares data with everyone who listens to it. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em obj} & Object to share \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Id, by default this-\/$>$\mbox{\hyperlink{classdepth__clustering_1_1Identifiable_a50f8b49ce7f7f0d9d02f31f74e0fc9e0}{id()}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractSender_a6120bda97c12587db40f34ed73b45475}\label{classdepth__clustering_1_1AbstractSender_a6120bda97c12587db40f34ed73b45475}} 
+\index{depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}!type@{type}}
+\index{type@{type}!depth\_clustering::AbstractSender$<$ ObjSendType $>$@{depth\_clustering::AbstractSender$<$ ObjSendType $>$}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily template$<$class Obj\+Send\+Type $>$ \\
+const char$\ast$ \mbox{\hyperlink{classdepth__clustering_1_1AbstractSender}{depth\+\_\+clustering\+::\+Abstract\+Sender}}$<$ Obj\+Send\+Type $>$\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets type of sender as string. 
+
+\begin{DoxyReturn}{Returns}
+Type as string 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1AbstractSender_a6120bda97c12587db40f34ed73b45475_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/communication/abstract\+\_\+sender.\+h\end{DoxyCompactItemize}

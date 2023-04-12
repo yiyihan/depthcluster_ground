@@ -1,0 +1,93 @@
+\hypertarget{classdepth__clustering_1_1RichPoint}{}\doxysection{depth\+\_\+clustering\+::Rich\+Point Class Reference}
+\label{classdepth__clustering_1_1RichPoint}\index{depth\_clustering::RichPoint@{depth\_clustering::RichPoint}}
+
+
+A point class that holds additional ring information.  
+
+
+
+
+{\ttfamily \#include $<$rich\+\_\+point.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a0c9f8f2afdb4f77c95cc1f6d17059d99}\label{classdepth__clustering_1_1RichPoint_a0c9f8f2afdb4f77c95cc1f6d17059d99}} 
+using {\bfseries Aligned\+Vector} = std\+::vector$<$ \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}}, Eigen\+::aligned\+\_\+allocator$<$ \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_adf1e070f6382ca76d42fb10b195cb163}\label{classdepth__clustering_1_1RichPoint_adf1e070f6382ca76d42fb10b195cb163}} 
+{\bfseries Rich\+Point} (float x, float y, float z)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_ad7e4053118640cb37135b3eef9a247c7}\label{classdepth__clustering_1_1RichPoint_ad7e4053118640cb37135b3eef9a247c7}} 
+{\bfseries Rich\+Point} (float x, float y, float z, uint16\+\_\+t ring)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a37e8581b974c3847daea7524787bc245}\label{classdepth__clustering_1_1RichPoint_a37e8581b974c3847daea7524787bc245}} 
+{\bfseries Rich\+Point} (Eigen\+::\+Vector3f \&eigen\+\_\+vec)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_ad7ce8be96957f7ae666ad6b8501fa356}\label{classdepth__clustering_1_1RichPoint_ad7ce8be96957f7ae666ad6b8501fa356}} 
+int {\bfseries ring} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_af275291243d335de109b9228795ade94}\label{classdepth__clustering_1_1RichPoint_af275291243d335de109b9228795ade94}} 
+float {\bfseries x} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_aaea684d74971bac09d5e211e479159db}\label{classdepth__clustering_1_1RichPoint_aaea684d74971bac09d5e211e479159db}} 
+float {\bfseries y} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a49418eaf11077c0fdd4a541ddbe1c4d3}\label{classdepth__clustering_1_1RichPoint_a49418eaf11077c0fdd4a541ddbe1c4d3}} 
+float {\bfseries z} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_ab3d41d1f3464897ea9f57ce077eece87}\label{classdepth__clustering_1_1RichPoint_ab3d41d1f3464897ea9f57ce077eece87}} 
+uint16\+\_\+t \& {\bfseries ring} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a175236ebb25c06591fed2306b19bb398}\label{classdepth__clustering_1_1RichPoint_a175236ebb25c06591fed2306b19bb398}} 
+float \& {\bfseries x} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_aad19fac1f1f1ee7f966f7607e3804fe9}\label{classdepth__clustering_1_1RichPoint_aad19fac1f1f1ee7f966f7607e3804fe9}} 
+float \& {\bfseries y} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a129fbe43fbf86a0b27e67cc784163f93}\label{classdepth__clustering_1_1RichPoint_a129fbe43fbf86a0b27e67cc784163f93}} 
+float \& {\bfseries z} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a3c7293a2ff7ab95df850526e93eb277a}\label{classdepth__clustering_1_1RichPoint_a3c7293a2ff7ab95df850526e93eb277a}} 
+const Eigen\+::\+Vector3f \& {\bfseries As\+Eigen\+Vector} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a66f91161be1d2c2090c086e90e420e6c}\label{classdepth__clustering_1_1RichPoint_a66f91161be1d2c2090c086e90e420e6c}} 
+Eigen\+::\+Vector3f \& {\bfseries As\+Eigen\+Vector} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_ae106e4b76e5934229eb962ff7280a351}\label{classdepth__clustering_1_1RichPoint_ae106e4b76e5934229eb962ff7280a351}} 
+float {\bfseries Dist\+To\+Sensor2D} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_aa0dcd56c919c501983379a22462a5af1}\label{classdepth__clustering_1_1RichPoint_aa0dcd56c919c501983379a22462a5af1}} 
+float {\bfseries Dist\+To\+Sensor3D} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a41681eb2f856011dbc156aca3b3e84ea}\label{classdepth__clustering_1_1RichPoint_a41681eb2f856011dbc156aca3b3e84ea}} 
+\mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \& {\bfseries operator=} (const \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \&other)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_aa204d62b838b1a09fb16832a4f9154c7}\label{classdepth__clustering_1_1RichPoint_aa204d62b838b1a09fb16832a4f9154c7}} 
+\mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \& {\bfseries operator=} (const Eigen\+::\+Vector3f \&other)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1RichPoint_a1e9997174d2dc9d146e98dae14253bd4}\label{classdepth__clustering_1_1RichPoint_a1e9997174d2dc9d146e98dae14253bd4}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A point class that holds additional ring information. 
+
+Collaboration diagram for depth\+\_\+clustering\+::Rich\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classdepth__clustering_1_1RichPoint__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/rich\+\_\+point.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/rich\+\_\+point.\+cpp\end{DoxyCompactItemize}

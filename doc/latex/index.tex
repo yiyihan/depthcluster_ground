@@ -1,0 +1,141 @@
+Ubuntu 14.\+04\href{https://travis-ci.org/PRBonn/depth_clustering}{\texttt{ }} \href{https://coveralls.io/github/PRBonn/depth_clustering}{\texttt{ }}
+
+This is a fast and robust algorithm to segment point clouds taken with Velodyne sensor into objects. It works with all available Velodyne sensors, i.\+e. 16, 32 and 64 beam ones.
+
+Check out a video that shows all objects outlined in orange\+: \href{https://www.youtube.com/watch?v=UXHX9kFGXfg}{\texttt{  
+\begin{DoxyImage}
+\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{depth_clustering_new_short_1.gif}
+\doxyfigcaption{Segmentation illustration}
+\end{DoxyImage}
+   }}\hypertarget{index_autotoc_md1}{}\doxysection{Prerequisites}\label{index_autotoc_md1}
+I recommend using a virtual environment in your catkin workspace ({\ttfamily $<$catkin\+\_\+ws$>$} in this readme) and will assume that you have it set up throughout this readme. Please update your commands accordingly if needed. I will be using {\ttfamily pipenv} that you can install with {\ttfamily pip}.\hypertarget{index_autotoc_md2}{}\doxysubsection{Set up workspace and catkin}\label{index_autotoc_md2}
+Regardless of your system you will need to do the following steps\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd <catkin\_ws>            \# navigate to the workspace}
+\DoxyCodeLine{pipenv shell -\/-\/fancy      \# start a virtual environment}
+\DoxyCodeLine{pip install catkin-\/tools  \# install catkin-\/tools for building}
+\DoxyCodeLine{mkdir src                 \# create src dir if you don't have it already}
+\DoxyCodeLine{\# Now you just need to clone the repo:}
+\DoxyCodeLine{git clone https://github.com/PRBonn/depth\_clustering src/depth\_clustering}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{System requirements}\label{index_autotoc_md3}
+You will need Open\+CV, Q\+G\+L\+Viewer, Free\+G\+L\+UT, Q\+T4 or Q\+T5 and optionally P\+CL and/or R\+OS. The following sections contain an installation command for various Ubuntu systems (click folds to expand)\+:
+
+$<$details$>$\hypertarget{index_autotoc_md4}{}\doxysubsubsection{Install these packages\+:}\label{index_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install libopencv-\/dev libqglviewer-\/dev freeglut3-\/dev libqt4-\/dev}
+\end{DoxyCode}
+
+
+$<$/details$>$
+
+$<$details$>$
+
+Ubuntu 16.\+04 \hypertarget{index_autotoc_md5}{}\doxysubsubsection{Install these packages\+:}\label{index_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install libopencv-\/dev libqglviewer-\/dev freeglut3-\/dev libqt5-\/dev}
+\end{DoxyCode}
+
+
+$<$/details$>$
+
+$<$details$>$
+
+Ubuntu 18.\+04 \hypertarget{index_autotoc_md6}{}\doxysubsubsection{Install these packages\+:}\label{index_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt install libopencv-\/dev libqglviewer-\/dev-\/qt5 freeglut3-\/dev qtbase5-\/dev }
+\end{DoxyCode}
+
+
+You might also need the latest Google\+Test binary installed on your systems. As Ubuntu is not shipped with these binaries by default, you would have to install them yourself or adapt the build script to build them from source.
+
+$<$/details$>$\hypertarget{index_autotoc_md7}{}\doxysubsection{Optional requirements}\label{index_autotoc_md7}
+If you want to use P\+CL clouds and/or use R\+OS for data acquisition you can install the following\+:
+\begin{DoxyItemize}
+\item (optional) P\+CL -\/ needed for saving clouds to disk
+\item (optional) R\+OS -\/ needed for subscribing to topics
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysection{How to build?}\label{index_autotoc_md8}
+This is a catkin package. So we assume that the code is in a catkin workspace and C\+Make knows about the existence of Catkin. It should be already taken care of if you followed the instructions \href{\#set-up-workspace-and-catkin}{\texttt{ here}}. Then you can build it from the project folder\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make -\/j4}
+\DoxyCodeLine{ctest -\/VV  \# run unit tests, optional}
+\end{DoxyCode}
+
+
+It can also be built with {\ttfamily catkin\+\_\+tools} if the code is inside catkin workspace\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{catkin build depth\_clustering}
+\end{DoxyCode}
+
+
+P.\+S. in case you don\textquotesingle{}t use {\ttfamily catkin build} you \href{https://catkin-tools.readthedocs.io/en/latest/installing.html}{\texttt{ should}} reconsider your decision.\hypertarget{index_autotoc_md9}{}\doxysection{How to run?}\label{index_autotoc_md9}
+See \href{examples/}{\texttt{ examples}}. There are R\+OS nodes as well as standalone binaries. Examples include showing axis oriented bounding boxes around found objects (these start with {\ttfamily show\+\_\+objects\+\_\+} prefix) as well as a node to save all segments to disk. The examples should be easy to tweak for your needs.\hypertarget{index_autotoc_md10}{}\doxysection{Run on real world data}\label{index_autotoc_md10}
+Go to folder with binaries\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd <path\_to\_project>/build/devel/lib/depth\_clustering}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Frank Moosmann\textquotesingle{}s \char`\"{}\+Velodyne S\+L\+A\+M\char`\"{} Dataset}\label{index_autotoc_md11}
+Get the data\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir data/; wget http://www.mrt.kit.edu/z/publ/download/velodyneslam/data/scenario1.zip -\/O data/moosmann.zip; unzip data/moosmann.zip -\/d data/; rm data/moosmann.zip}
+\end{DoxyCode}
+
+
+Run a binary to show detected objects\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./show\_objects\_moosmann -\/-\/path data/scenario1/}
+\end{DoxyCode}
+
+
+Alternatively, you can run the data from Qt G\+UI (as in video)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./qt\_gui\_app}
+\end{DoxyCode}
+
+
+Once the G\+UI is shown, click on {\ttfamily Open\+Folder} button and choose the folder where you have unpacked the {\ttfamily png} files, e.\+g. {\ttfamily data/scenario1/}. Navigate the viewer with arrows and controls seen on screen.\hypertarget{index_autotoc_md12}{}\doxysubsubsection{Other data}\label{index_autotoc_md12}
+There are also examples on how to run the processing on K\+I\+T\+TI data and on R\+OS input. Follow the {\ttfamily -\/-\/help} output of each of the examples for more details.
+
+Also you can load the data from the G\+UI. Make sure you are loading files with correct extension ({\ttfamily $\ast$.txt} and {\ttfamily $\ast$.bin} for K\+I\+T\+TI, {\ttfamily $\ast$.png} for Moosmann\textquotesingle{}s data).\hypertarget{index_autotoc_md13}{}\doxysection{Documentation}\label{index_autotoc_md13}
+You should be able to get Doxygen documentation by running\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd doc/}
+\DoxyCodeLine{doxygen Doxyfile.conf}
+\end{DoxyCode}
+\hypertarget{index_autotoc_md14}{}\doxysection{Related publications}\label{index_autotoc_md14}
+Please cite related papers if you use this code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@InProceedings\{bogoslavskyi16iros,}
+\DoxyCodeLine{title     = \{Fast Range Image-\/Based Segmentation of Sparse 3D Laser Scans for Online Operation\},}
+\DoxyCodeLine{author    = \{I. Bogoslavskyi and C. Stachniss\},}
+\DoxyCodeLine{booktitle = \{Proc. of The International Conference on Intelligent Robots and Systems (IROS)\},}
+\DoxyCodeLine{year      = \{2016\},}
+\DoxyCodeLine{url       = \{http://www.ipb.uni-\/bonn.de/pdfs/bogoslavskyi16iros.pdf\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@Article\{bogoslavskyi17pfg,}
+\DoxyCodeLine{title   = \{Efficient Online Segmentation for Sparse 3D Laser Scans\},}
+\DoxyCodeLine{author  = \{I. Bogoslavskyi and C. Stachniss\},}
+\DoxyCodeLine{journal = \{PFG -\/-\/ Journal of Photogrammetry, Remote Sensing and Geoinformation Science\},}
+\DoxyCodeLine{year    = \{2017\},}
+\DoxyCodeLine{pages   = \{1-\/-\/12\},}
+\DoxyCodeLine{url     = \{https://link.springer.com/article/10.1007\%2Fs41064-\/016-\/0003-\/y\},}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 

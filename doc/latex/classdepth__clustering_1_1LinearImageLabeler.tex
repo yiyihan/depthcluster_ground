@@ -1,0 +1,223 @@
+\hypertarget{classdepth__clustering_1_1LinearImageLabeler}{}\doxysection{depth\+\_\+clustering\+::Linear\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$ Class Template Reference}
+\label{classdepth__clustering_1_1LinearImageLabeler}\index{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+
+
+Class for linear image labeler.  
+
+
+
+
+{\ttfamily \#include $<$linear\+\_\+image\+\_\+labeler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_ad1026a0b49c300c6415691716b5acb99}{Linear\+Image\+Labeler}} (const cv\+::\+Mat \&depth\+\_\+image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params, const Radians \&angle\+\_\+threshold)
+\begin{DoxyCompactList}\small\item\em Initialize Linear image labeler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_ac5544f26628a05978a6a989ade6a1cd6}{Label\+One\+Component}} (uint16\+\_\+t label, const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&start, const \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff}{Abstract\+Diff}} $\ast$diff\+\_\+helper)
+\begin{DoxyCompactList}\small\item\em Label a single connected component with B\+FS. Can be done faster if we augment the queue with a hash or smth. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_abef293e252cf1afcac619f643f376921}{Depth\+At}} (const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&coord) const
+\begin{DoxyCompactList}\small\item\em Gets depth value at pixel. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_a4389f0085999f71cc283d6c378a2536a}{Label\+At}} (const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&coord) const
+\begin{DoxyCompactList}\small\item\em Gets label of a given pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_a4693e920b2245f70206a11e141ddcb8f}{Set\+Label}} (const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&coord, uint16\+\_\+t label)
+\begin{DoxyCompactList}\small\item\em Sets label of a given pixel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_a0dcf6253650499df0c723caaefc459c5}\label{classdepth__clustering_1_1LinearImageLabeler_a0dcf6253650499df0c723caaefc459c5}} 
+int16\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_a0dcf6253650499df0c723caaefc459c5}{Wrap\+Cols}} (int16\+\_\+t col) const
+\begin{DoxyCompactList}\small\item\em Wrap columns around image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_a987cca7d9daab304af4bcc448bf6de0f}\label{classdepth__clustering_1_1LinearImageLabeler_a987cca7d9daab304af4bcc448bf6de0f}} 
+void \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler_a987cca7d9daab304af4bcc448bf6de0f}{Compute\+Labels}} (Diff\+Factory\+::\+Diff\+Type diff\+\_\+type) override
+\begin{DoxyCompactList}\small\item\em Calculates the labels running over the whole image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_a7237797a8c13b16aa3cdefe913d8c938}\label{classdepth__clustering_1_1LinearImageLabeler_a7237797a8c13b16aa3cdefe913d8c938}} 
+std\+::array$<$ \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}}, N\+E\+I\+G\+H\+\_\+\+S\+I\+ZE $>$ {\bfseries Neighborhood}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_ad6a78dde18091847582a7cea428ed5fb}\label{classdepth__clustering_1_1LinearImageLabeler_ad6a78dde18091847582a7cea428ed5fb}} 
+static constexpr int16\+\_\+t {\bfseries N\+E\+I\+G\+H\+\_\+\+S\+I\+ZE} = 2 $\ast$ S\+T\+E\+P\+\_\+\+R\+OW + 2 $\ast$ S\+T\+E\+P\+\_\+\+C\+OL
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$\newline
+class depth\+\_\+clustering\+::\+Linear\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+O\+W, S\+T\+E\+P\+\_\+\+C\+O\+L $>$}
+
+Class for linear image labeler. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em S\+T\+E\+P\+\_\+\+R\+OW} & step we do over image over rows \\
+\hline
+{\em S\+T\+E\+P\+\_\+\+C\+OL} & step we do over image over cols \\
+\hline
+\end{DoxyTemplParams}
+
+
+Inheritance diagram for depth\+\_\+clustering\+::Linear\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classdepth__clustering_1_1LinearImageLabeler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Linear\+Image\+Labeler$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1LinearImageLabeler__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_ad1026a0b49c300c6415691716b5acb99}\label{classdepth__clustering_1_1LinearImageLabeler_ad1026a0b49c300c6415691716b5acb99}} 
+\index{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}!LinearImageLabeler@{LinearImageLabeler}}
+\index{LinearImageLabeler@{LinearImageLabeler}!depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+\doxysubsubsection{\texorpdfstring{LinearImageLabeler()}{LinearImageLabeler()}}
+{\footnotesize\ttfamily template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$ \\
+\mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler}{depth\+\_\+clustering\+::\+Linear\+Image\+Labeler}}$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+::\mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler}{Linear\+Image\+Labeler}} (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{depth\+\_\+image,  }\item[{const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&}]{params,  }\item[{const Radians \&}]{angle\+\_\+threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Initialize Linear image labeler. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em depth\+\_\+image} & The depth image \\
+\hline
+\mbox{\texttt{ in}}  & {\em params} & The projection parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em angle\+\_\+threshold} & The angle threshold to seaparate clusters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_abef293e252cf1afcac619f643f376921}\label{classdepth__clustering_1_1LinearImageLabeler_abef293e252cf1afcac619f643f376921}} 
+\index{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}!DepthAt@{DepthAt}}
+\index{DepthAt@{DepthAt}!depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+\doxysubsubsection{\texorpdfstring{DepthAt()}{DepthAt()}}
+{\footnotesize\ttfamily template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$ \\
+float \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler}{depth\+\_\+clustering\+::\+Linear\+Image\+Labeler}}$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+::Depth\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{coord }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets depth value at pixel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em coord} & Pixel coordinate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+depth at pixel 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LinearImageLabeler_abef293e252cf1afcac619f643f376921_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_a4389f0085999f71cc283d6c378a2536a}\label{classdepth__clustering_1_1LinearImageLabeler_a4389f0085999f71cc283d6c378a2536a}} 
+\index{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}!LabelAt@{LabelAt}}
+\index{LabelAt@{LabelAt}!depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+\doxysubsubsection{\texorpdfstring{LabelAt()}{LabelAt()}}
+{\footnotesize\ttfamily template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler}{depth\+\_\+clustering\+::\+Linear\+Image\+Labeler}}$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+::Label\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{coord }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets label of a given pixel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em coord} & Pixel coordinate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+label for pixel 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LinearImageLabeler_a4389f0085999f71cc283d6c378a2536a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_ac5544f26628a05978a6a989ade6a1cd6}\label{classdepth__clustering_1_1LinearImageLabeler_ac5544f26628a05978a6a989ade6a1cd6}} 
+\index{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}!LabelOneComponent@{LabelOneComponent}}
+\index{LabelOneComponent@{LabelOneComponent}!depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+\doxysubsubsection{\texorpdfstring{LabelOneComponent()}{LabelOneComponent()}}
+{\footnotesize\ttfamily template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler}{depth\+\_\+clustering\+::\+Linear\+Image\+Labeler}}$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+::Label\+One\+Component (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{label,  }\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{start,  }\item[{const \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff}{Abstract\+Diff}} $\ast$}]{diff\+\_\+helper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Label a single connected component with B\+FS. Can be done faster if we augment the queue with a hash or smth. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em label} & Label this component with this label \\
+\hline
+\mbox{\texttt{ in}}  & {\em start} & Start pixel \\
+\hline
+\mbox{\texttt{ in}}  & {\em diff\+\_\+helper} & The difference helper \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LinearImageLabeler_ac5544f26628a05978a6a989ade6a1cd6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LinearImageLabeler_ac5544f26628a05978a6a989ade6a1cd6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1LinearImageLabeler_a4693e920b2245f70206a11e141ddcb8f}\label{classdepth__clustering_1_1LinearImageLabeler_a4693e920b2245f70206a11e141ddcb8f}} 
+\index{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}!SetLabel@{SetLabel}}
+\index{SetLabel@{SetLabel}!depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$@{depth\_clustering::LinearImageLabeler$<$ STEP\_ROW, STEP\_COL $>$}}
+\doxysubsubsection{\texorpdfstring{SetLabel()}{SetLabel()}}
+{\footnotesize\ttfamily template$<$int16\+\_\+t S\+T\+E\+P\+\_\+\+R\+OW = 1, int16\+\_\+t S\+T\+E\+P\+\_\+\+C\+OL = 1$>$ \\
+void \mbox{\hyperlink{classdepth__clustering_1_1LinearImageLabeler}{depth\+\_\+clustering\+::\+Linear\+Image\+Labeler}}$<$ S\+T\+E\+P\+\_\+\+R\+OW, S\+T\+E\+P\+\_\+\+C\+OL $>$\+::Set\+Label (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{coord,  }\item[{uint16\+\_\+t}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets label of a given pixel. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em coord} & Pixel coordinate \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1LinearImageLabeler_a4693e920b2245f70206a11e141ddcb8f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/linear\+\_\+image\+\_\+labeler.\+h\end{DoxyCompactItemize}

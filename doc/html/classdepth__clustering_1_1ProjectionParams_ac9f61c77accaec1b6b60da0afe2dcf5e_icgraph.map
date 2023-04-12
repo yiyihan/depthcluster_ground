@@ -1,0 +1,4 @@
+<map id="depth_clustering::ProjectionParams::RowFromAngle" name="depth_clustering::ProjectionParams::RowFromAngle">
+<area shape="rect" id="node1" title="Get row number from angle." alt="" coords="232,5,415,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1SphericalProjection.html#ab80cb1d72f60e7a887affa0ab10ebc03" title="Generate projection from points." alt="" coords="5,5,184,47"/>
+</map>

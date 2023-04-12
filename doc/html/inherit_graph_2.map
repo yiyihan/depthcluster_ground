@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classdepth__clustering_1_1AbstractImageLabeler.html" title="Class for abstract image labeler." alt="" coords="5,53,180,94"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1DijkstraImageLabeler.html" title="Label image with Dijkstra. Slower, then linear." alt="" coords="228,5,417,61"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1LinearImageLabeler.html" title="Class for linear image labeler." alt="" coords="228,85,417,141"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="depth_clustering::RingProjection::InitFromPoints" name="depth_clustering::RingProjection::InitFromPoints">
+<area shape="rect" id="node1" title="Initialize from points, that have ring information in them." alt="" coords="5,39,216,80"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1CloudProjection.html#a3bd71fd09ce42208b793d763637a527b" title="Check if where we store data is valid." alt="" coords="264,5,481,47"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1ProjectionParams.html#a76d3be24f6c166bc5567d622e4a4995b" title="Get col number from angle." alt="" coords="281,71,464,112"/>
+</map>

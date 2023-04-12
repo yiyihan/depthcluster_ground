@@ -1,0 +1,116 @@
+\hypertarget{classdepth__clustering_1_1AbstractImageLabeler}{}\doxysection{depth\+\_\+clustering\+::Abstract\+Image\+Labeler Class Reference}
+\label{classdepth__clustering_1_1AbstractImageLabeler}\index{depth\_clustering::AbstractImageLabeler@{depth\_clustering::AbstractImageLabeler}}
+
+
+Class for abstract image labeler.  
+
+
+
+
+{\ttfamily \#include $<$abstract\+\_\+image\+\_\+labeler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_ac01889e0a3d088cf7627809f4d8aab19}\label{classdepth__clustering_1_1AbstractImageLabeler_ac01889e0a3d088cf7627809f4d8aab19}} 
+{\bfseries Abstract\+Image\+Labeler} (const cv\+::\+Mat \&depth\+\_\+image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params, const Radians \&angle\+\_\+threshold)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_a28e8e094c9a47a02a2ce9eabef9526e6}\label{classdepth__clustering_1_1AbstractImageLabeler_a28e8e094c9a47a02a2ce9eabef9526e6}} 
+void {\bfseries Set\+Depth\+Image} (const cv\+::\+Mat \&depth\+\_\+image)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_ac66f0554e1c988ab0bf413a2f17d3905}\label{classdepth__clustering_1_1AbstractImageLabeler_ac66f0554e1c988ab0bf413a2f17d3905}} 
+virtual void \mbox{\hyperlink{classdepth__clustering_1_1AbstractImageLabeler_ac66f0554e1c988ab0bf413a2f17d3905}{Compute\+Labels}} (Diff\+Factory\+::\+Diff\+Type diff\+\_\+type)=0
+\begin{DoxyCompactList}\small\item\em An interface for children to compute labels. \end{DoxyCompactList}\item 
+const cv\+::\+Mat $\ast$ \mbox{\hyperlink{classdepth__clustering_1_1AbstractImageLabeler_a7b2f8edf44f3ccb01fb71c296241615e}{Get\+Label\+Image}} () const
+\begin{DoxyCompactList}\small\item\em Gets the label image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1AbstractImageLabeler_abab18e0c1ca40b54922a2f21948b996b}{Labels\+To\+Color}} (const cv\+::\+Mat \&label\+\_\+image)
+\begin{DoxyCompactList}\small\item\em Generates random-\/colored image from image of labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_adb50d2beeba4e4eac26b5ace9304728b}\label{classdepth__clustering_1_1AbstractImageLabeler_adb50d2beeba4e4eac26b5ace9304728b}} 
+const cv\+::\+Mat $\ast$ {\bfseries \+\_\+depth\+\_\+image\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_a25fcaead9f8806fa75ad44c669e2a518}\label{classdepth__clustering_1_1AbstractImageLabeler_a25fcaead9f8806fa75ad44c669e2a518}} 
+\mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} {\bfseries \+\_\+params}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_aeabb8ac8238c684066f8c0edcca9b807}\label{classdepth__clustering_1_1AbstractImageLabeler_aeabb8ac8238c684066f8c0edcca9b807}} 
+cv\+::\+Mat {\bfseries \+\_\+label\+\_\+image}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_a1a338d254a41ba94bd4122aa006fbe57}\label{classdepth__clustering_1_1AbstractImageLabeler_a1a338d254a41ba94bd4122aa006fbe57}} 
+float {\bfseries \+\_\+radians\+\_\+threshold}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_a24ea9d1c40b872189a9e93f369ae34b2}\label{classdepth__clustering_1_1AbstractImageLabeler_a24ea9d1c40b872189a9e93f369ae34b2}} 
+static constexpr std\+::array$<$ std\+::array$<$ int, 3 $>$, 200 $>$ {\bfseries R\+A\+N\+D\+O\+M\+\_\+\+C\+O\+L\+O\+RS}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for abstract image labeler. 
+
+This class is responsible for labeling an given depth image based on the provided angle\+\_\+threshold. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Abstract\+Image\+Labeler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1AbstractImageLabeler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Abstract\+Image\+Labeler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1AbstractImageLabeler__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_a7b2f8edf44f3ccb01fb71c296241615e}\label{classdepth__clustering_1_1AbstractImageLabeler_a7b2f8edf44f3ccb01fb71c296241615e}} 
+\index{depth\_clustering::AbstractImageLabeler@{depth\_clustering::AbstractImageLabeler}!GetLabelImage@{GetLabelImage}}
+\index{GetLabelImage@{GetLabelImage}!depth\_clustering::AbstractImageLabeler@{depth\_clustering::AbstractImageLabeler}}
+\doxysubsubsection{\texorpdfstring{GetLabelImage()}{GetLabelImage()}}
+{\footnotesize\ttfamily const cv\+::\+Mat$\ast$ depth\+\_\+clustering\+::\+Abstract\+Image\+Labeler\+::\+Get\+Label\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the label image. 
+
+\begin{DoxyReturn}{Returns}
+The label image. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1AbstractImageLabeler_abab18e0c1ca40b54922a2f21948b996b}\label{classdepth__clustering_1_1AbstractImageLabeler_abab18e0c1ca40b54922a2f21948b996b}} 
+\index{depth\_clustering::AbstractImageLabeler@{depth\_clustering::AbstractImageLabeler}!LabelsToColor@{LabelsToColor}}
+\index{LabelsToColor@{LabelsToColor}!depth\_clustering::AbstractImageLabeler@{depth\_clustering::AbstractImageLabeler}}
+\doxysubsubsection{\texorpdfstring{LabelsToColor()}{LabelsToColor()}}
+{\footnotesize\ttfamily Mat depth\+\_\+clustering\+::\+Abstract\+Image\+Labeler\+::\+Labels\+To\+Color (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{label\+\_\+image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates random-\/colored image from image of labels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em label\+\_\+image} & The label image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Random-\/colored image from label image 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/abstract\+\_\+image\+\_\+labeler.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/abstract\+\_\+image\+\_\+labeler.\+cpp\end{DoxyCompactItemize}

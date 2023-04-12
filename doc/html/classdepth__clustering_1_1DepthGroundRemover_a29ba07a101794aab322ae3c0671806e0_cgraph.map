@@ -1,0 +1,4 @@
+<map id="depth_clustering::DepthGroundRemover::GetLineAngle" name="depth_clustering::DepthGroundRemover::GetLineAngle">
+<area shape="rect" id="node1" title="Get line angle." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1ProjectionParams.html#adc48aa54d8c0c1da8167ab4001a83131" title="Get angle from row." alt="" coords="256,5,439,47"/>
+</map>

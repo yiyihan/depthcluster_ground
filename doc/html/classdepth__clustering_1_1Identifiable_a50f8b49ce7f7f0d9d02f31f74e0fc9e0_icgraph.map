@@ -1,0 +1,6 @@
+<map id="depth_clustering::Identifiable::id" name="depth_clustering::Identifiable::id">
+<area shape="rect" id="node1" title="Gets current object id." alt="" coords="240,122,447,149"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1AbstractSender.html#aca33c29cca1916fb0a3edd9024a49b51" title="Adds a client." alt="" coords="11,5,186,76"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1AbstractSender.html#a0c33c98abe8fa71a86f02af95b1c71c1" title="Removes a client." alt="" coords="11,100,186,171"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1AbstractSender.html#a147752e5ab7ca15da9c8d8e60575390b" title="Shares data with everyone who listens to it." alt="" coords="5,195,192,265"/>
+</map>

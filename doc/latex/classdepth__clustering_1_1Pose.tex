@@ -1,0 +1,138 @@
+\hypertarget{classdepth__clustering_1_1Pose}{}\doxysection{depth\+\_\+clustering\+::Pose Class Reference}
+\label{classdepth__clustering_1_1Pose}\index{depth\_clustering::Pose@{depth\_clustering::Pose}}
+
+
+Extends Eigen\+::\+Affine transform adding useful functionality to it.  
+
+
+
+
+{\ttfamily \#include $<$pose.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a15a4a5c78b9b4b6ac2c091f614f161f3}\label{classdepth__clustering_1_1Pose_a15a4a5c78b9b4b6ac2c091f614f161f3}} 
+using {\bfseries Vector6f} = Eigen\+::\+Matrix$<$ float, 6, 1 $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a0d8c1c06707fe5c183b7910b3d886a00}\label{classdepth__clustering_1_1Pose_a0d8c1c06707fe5c183b7910b3d886a00}} 
+using {\bfseries Ptr} = shared\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a15c52124f7b592fa4d60b5dc6f57b842}\label{classdepth__clustering_1_1Pose_a15c52124f7b592fa4d60b5dc6f57b842}} 
+using {\bfseries Const\+Ptr} = shared\+\_\+ptr$<$ const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a21c3df0c69a753ab98cc065f33f73f7e}\label{classdepth__clustering_1_1Pose_a21c3df0c69a753ab98cc065f33f73f7e}} 
+using {\bfseries Base} = Eigen\+::\+Affine3f
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a776425156ff6d177a3f74bb81b322e34}\label{classdepth__clustering_1_1Pose_a776425156ff6d177a3f74bb81b322e34}} 
+{\bfseries Pose} (const float x, const float y, const float theta)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a667cea1e30e54fbe31ff2386d3704184}\label{classdepth__clustering_1_1Pose_a667cea1e30e54fbe31ff2386d3704184}} 
+{\bfseries Pose} (const Eigen\+::\+Vector3f \&v)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_ac40f03706f9d27f14f64aabc49f947c9}\label{classdepth__clustering_1_1Pose_ac40f03706f9d27f14f64aabc49f947c9}} 
+{\bfseries Pose} (const Eigen\+::\+Affine3f \&m)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a4c5bfdddd3c29efa9b44745f67ab40ea}\label{classdepth__clustering_1_1Pose_a4c5bfdddd3c29efa9b44745f67ab40ea}} 
+float {\bfseries x} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a969aced7b080a6e4a69ce6e030585b48}\label{classdepth__clustering_1_1Pose_a969aced7b080a6e4a69ce6e030585b48}} 
+float {\bfseries y} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_ac8c15182041910fabce5e17f3c2118ba}\label{classdepth__clustering_1_1Pose_ac8c15182041910fabce5e17f3c2118ba}} 
+float {\bfseries z} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a47059ac31a81049047b2fdc7e9ece664}\label{classdepth__clustering_1_1Pose_a47059ac31a81049047b2fdc7e9ece664}} 
+float {\bfseries theta} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a809c213da1f2c51fde0a07f283f3c892}\label{classdepth__clustering_1_1Pose_a809c213da1f2c51fde0a07f283f3c892}} 
+const float \& {\bfseries likelihood} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a46a6316ba2b6fa0dca276ac60893d2ba}\label{classdepth__clustering_1_1Pose_a46a6316ba2b6fa0dca276ac60893d2ba}} 
+void {\bfseries SetX} (float x)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_aa3931408c4e3da517c50cbbde67c8766}\label{classdepth__clustering_1_1Pose_aa3931408c4e3da517c50cbbde67c8766}} 
+void {\bfseries SetY} (float y)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a115b7eaf6d77c55b7ab495f39c15fefd}\label{classdepth__clustering_1_1Pose_a115b7eaf6d77c55b7ab495f39c15fefd}} 
+void {\bfseries SetZ} (float z)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a7a548bdee4f48f7bb0816897ef592d0f}\label{classdepth__clustering_1_1Pose_a7a548bdee4f48f7bb0816897ef592d0f}} 
+void {\bfseries Set\+Theta} (float theta)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a14002c6e14489f3df57068b77370d150}\label{classdepth__clustering_1_1Pose_a14002c6e14489f3df57068b77370d150}} 
+void {\bfseries Set\+Pitch} (float pitch)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_aadb23ff1c4bd7c946ce36c794dfabbeb}\label{classdepth__clustering_1_1Pose_aadb23ff1c4bd7c946ce36c794dfabbeb}} 
+void {\bfseries Set\+Roll} (float roll)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_ae7c64f3c2486b6cdb981fb282da946fc}\label{classdepth__clustering_1_1Pose_ae7c64f3c2486b6cdb981fb282da946fc}} 
+void {\bfseries Set\+Yaw} (float yaw)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a52cfa58dd1e0810656dd18dcc324f465}\label{classdepth__clustering_1_1Pose_a52cfa58dd1e0810656dd18dcc324f465}} 
+void {\bfseries Set\+Likelihood} (float likelihood)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a639df39dd81c107f864fc34ab85c6f37}\label{classdepth__clustering_1_1Pose_a639df39dd81c107f864fc34ab85c6f37}} 
+void {\bfseries To\+Local\+Frame\+Of} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&other)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_adab81ff679ed92e0e2f3b0edaa22904d}\label{classdepth__clustering_1_1Pose_adab81ff679ed92e0e2f3b0edaa22904d}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} {\bfseries In\+Local\+Frame\+Of} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&other) const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a50b753dc0f4037802bf6eb7288faa1ca}\label{classdepth__clustering_1_1Pose_a50b753dc0f4037802bf6eb7288faa1ca}} 
+Pose\+::\+Ptr {\bfseries In\+Local\+Frame\+Of} (const Pose\+::\+Ptr \&other) const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a79aad7062818ef15d006b2fd9b3b1d32}\label{classdepth__clustering_1_1Pose_a79aad7062818ef15d006b2fd9b3b1d32}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries operator=} (const Eigen\+::\+Affine3f \&other)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a05bd18a5e4c30f345b3a18de0274d6e2}\label{classdepth__clustering_1_1Pose_a05bd18a5e4c30f345b3a18de0274d6e2}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries operator=} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&other)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_ad753de7d1d9d6e3923f352820a0a8be0}\label{classdepth__clustering_1_1Pose_ad753de7d1d9d6e3923f352820a0a8be0}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries operator=} (const Eigen\+::\+Matrix4f \&other)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_abda699c75125980c1d3dab5cde5a1881}\label{classdepth__clustering_1_1Pose_abda699c75125980c1d3dab5cde5a1881}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries operator=} (const Eigen\+::\+Vector3f \&v)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a885967b7ce945d7916c14664c6f5da5f}\label{classdepth__clustering_1_1Pose_a885967b7ce945d7916c14664c6f5da5f}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} {\bfseries operator-\/} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a7bf20eedbaf08b0286df4548a9484f54}\label{classdepth__clustering_1_1Pose_a7bf20eedbaf08b0286df4548a9484f54}} 
+void {\bfseries Print2D} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_af80ae6270f75c20d4a2ee048baa4a889}\label{classdepth__clustering_1_1Pose_af80ae6270f75c20d4a2ee048baa4a889}} 
+void {\bfseries Print3D} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_aea9c6f93dabb0acb83243d76fa4f93f3}\label{classdepth__clustering_1_1Pose_aea9c6f93dabb0acb83243d76fa4f93f3}} 
+Vector6f {\bfseries To\+Vector6f} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Pose_a7bbd2374e9891af96c546015a2f2d4d3}\label{classdepth__clustering_1_1Pose_a7bbd2374e9891af96c546015a2f2d4d3}} 
+static \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} {\bfseries From\+Vector6f} (const Vector6f \&v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extends Eigen\+::\+Affine transform adding useful functionality to it. 
+
+Inherits Affine3f.
+
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Pose\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classdepth__clustering_1_1Pose__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/pose.\+h\end{DoxyCompactItemize}

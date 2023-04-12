@@ -1,0 +1,202 @@
+\hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed}{}\doxysection{depth\+\_\+clustering\+::Angle\+Diff\+Precomputed Class Reference}
+\label{classdepth__clustering_1_1AngleDiffPrecomputed}\index{depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}}
+
+
+Class for angle difference.  
+
+
+
+
+{\ttfamily \#include $<$angle\+\_\+diff.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_a0cd5a0071d191d6a4f3594a789777ff3}{Angle\+Diff\+Precomputed}} (const cv\+::\+Mat $\ast$source\+\_\+image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$params)
+\begin{DoxyCompactList}\small\item\em Precompute the angles to avoid losing time on that. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_ae15bb5fc9488ae2b26c77665931b8626}{Diff\+At}} (const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&from, const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&to) const override
+\begin{DoxyCompactList}\small\item\em Compute angle-\/based difference. See paper for details. Only one of the following situations is possible\+: \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a28a32c0cb0405163fe237909fe5f6c0c}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a28a32c0cb0405163fe237909fe5f6c0c}} 
+bool \mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_a28a32c0cb0405163fe237909fe5f6c0c}{Satisfies\+Threshold}} (float angle, float threshold) const override
+\begin{DoxyCompactList}\small\item\em Threshold is satisfied if angle is B\+I\+G\+G\+ER than threshold. \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_a2fd85404d06843af0ee5c713017f6641}{Visualize}} () const
+\begin{DoxyCompactList}\small\item\em Visualize $\beta$ angles as a {\ttfamily cv\+::\+Mat} color image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a8f333b5196e9dcaa7923f82d362c7281}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a8f333b5196e9dcaa7923f82d362c7281}} 
+void \mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_a8f333b5196e9dcaa7923f82d362c7281}{Pre\+Compute\+Alpha\+Vecs}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/compute values for angles for all cols and rows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_aeb86ee61c6e8fc1b5b554368b1f5fa27}{Pre\+Compute\+Beta\+Angles}} ()
+\begin{DoxyCompactList}\small\item\em Precompute all $\beta$ angles for the image. It generates two matrices for row-\/wise and col-\/wise angles. See picture for illustration. The squares store values of angles between pixels with computation direction shown by arrows. Note that the columns matrix wraps around, i.\+e. the last element stores the difference in angles between the last pixel of the original image and the first one. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classdepth__clustering_1_1AngleDiffPrecomputed_aa67b440539cd571a990af5131a5b1ec0}{Get\+Beta}} (float alpha, float current\+\_\+depth, float neighbor\+\_\+depth) const
+\begin{DoxyCompactList}\small\item\em Compute the angle $\beta$ of incline of the line spawned by two given beams. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_ac37e01df194d9063b7e7bd1f7b7aa6a4}\label{classdepth__clustering_1_1AngleDiffPrecomputed_ac37e01df194d9063b7e7bd1f7b7aa6a4}} 
+const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$ {\bfseries \+\_\+params} = nullptr
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a2ba86b3ed5f12c2a7e2e8beef81bd88d}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a2ba86b3ed5f12c2a7e2e8beef81bd88d}} 
+std\+::vector$<$ float $>$ {\bfseries \+\_\+row\+\_\+alphas}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a90f6e3fd2f4b585c2cd03809f3818ee9}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a90f6e3fd2f4b585c2cd03809f3818ee9}} 
+std\+::vector$<$ float $>$ {\bfseries \+\_\+col\+\_\+alphas}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a2df8751352e4621cb69743801e151b75}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a2df8751352e4621cb69743801e151b75}} 
+cv\+::\+Mat {\bfseries \+\_\+beta\+\_\+rows}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_ae7faa81ea82d0ff9f75f8a1e63659ced}\label{classdepth__clustering_1_1AngleDiffPrecomputed_ae7faa81ea82d0ff9f75f8a1e63659ced}} 
+cv\+::\+Mat {\bfseries \+\_\+beta\+\_\+cols}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for angle difference. 
+
+Inheritance diagram for depth\+\_\+clustering\+::Angle\+Diff\+Precomputed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classdepth__clustering_1_1AngleDiffPrecomputed__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for depth\+\_\+clustering\+::Angle\+Diff\+Precomputed\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1AngleDiffPrecomputed__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a0cd5a0071d191d6a4f3594a789777ff3}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a0cd5a0071d191d6a4f3594a789777ff3}} 
+\index{depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}!AngleDiffPrecomputed@{AngleDiffPrecomputed}}
+\index{AngleDiffPrecomputed@{AngleDiffPrecomputed}!depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{AngleDiffPrecomputed()}{AngleDiffPrecomputed()}}
+{\footnotesize\ttfamily depth\+\_\+clustering\+::\+Angle\+Diff\+Precomputed\+::\+Angle\+Diff\+Precomputed (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat $\ast$}]{source\+\_\+image,  }\item[{const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $\ast$}]{params }\end{DoxyParamCaption})}
+
+
+
+Precompute the angles to avoid losing time on that. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em source\+\_\+image} & The source image \\
+\hline
+\mbox{\texttt{ in}}  & {\em params} & The projection parameters \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_ae15bb5fc9488ae2b26c77665931b8626}\label{classdepth__clustering_1_1AngleDiffPrecomputed_ae15bb5fc9488ae2b26c77665931b8626}} 
+\index{depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}!DiffAt@{DiffAt}}
+\index{DiffAt@{DiffAt}!depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{DiffAt()}{DiffAt()}}
+{\footnotesize\ttfamily float depth\+\_\+clustering\+::\+Angle\+Diff\+Precomputed\+::\+Diff\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{from,  }\item[{const \mbox{\hyperlink{structdepth__clustering_1_1PixelCoord}{Pixel\+Coord}} \&}]{to }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compute angle-\/based difference. See paper for details. Only one of the following situations is possible\+: 
+
+
+\begin{DoxyItemize}
+\item from.\+row $>$ to.\+row
+\item from.\+row $<$ to.\+row
+\item from.\+col $>$ to.\+col
+\item from.\+col $<$ to.\+col
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em from} & Pixel from which to compute difference \\
+\hline
+\mbox{\texttt{ in}}  & {\em to} & Pixel to which to compute difference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle difference between the values 
+\end{DoxyReturn}
+If one of rows is biggest possible -\/ use it. Otherwise use {\ttfamily std\+::min(from.\+row, to.\+row)}.
+
+If one of cols is biggest possible -\/ use it. Otherwise use {\ttfamily std\+::min(from.\+col, to.\+col)}.
+
+Implements \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff_a06ba188d8d83d0e4bad66c833656c26d}{depth\+\_\+clustering\+::\+Abstract\+Diff}}.
+
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_aa67b440539cd571a990af5131a5b1ec0}\label{classdepth__clustering_1_1AngleDiffPrecomputed_aa67b440539cd571a990af5131a5b1ec0}} 
+\index{depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}!GetBeta@{GetBeta}}
+\index{GetBeta@{GetBeta}!depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{GetBeta()}{GetBeta()}}
+{\footnotesize\ttfamily float depth\+\_\+clustering\+::\+Angle\+Diff\+Precomputed\+::\+Get\+Beta (\begin{DoxyParamCaption}\item[{float}]{alpha,  }\item[{float}]{current\+\_\+depth,  }\item[{float}]{neighbor\+\_\+depth }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Compute the angle $\beta$ of incline of the line spawned by two given beams. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em alpha} & The angle $\alpha$ between the beams. \\
+\hline
+\mbox{\texttt{ in}}  & {\em current\+\_\+depth} & The reading of the first beam in meters. \\
+\hline
+\mbox{\texttt{ in}}  & {\em neighbor\+\_\+depth} & The reading of the second beam in meters.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle of incidence of the line spawned by endpoints of two given beams. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1AngleDiffPrecomputed_aa67b440539cd571a990af5131a5b1ec0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_aeb86ee61c6e8fc1b5b554368b1f5fa27}\label{classdepth__clustering_1_1AngleDiffPrecomputed_aeb86ee61c6e8fc1b5b554368b1f5fa27}} 
+\index{depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}!PreComputeBetaAngles@{PreComputeBetaAngles}}
+\index{PreComputeBetaAngles@{PreComputeBetaAngles}!depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{PreComputeBetaAngles()}{PreComputeBetaAngles()}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Angle\+Diff\+Precomputed\+::\+Pre\+Compute\+Beta\+Angles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Precompute all $\beta$ angles for the image. It generates two matrices for row-\/wise and col-\/wise angles. See picture for illustration. The squares store values of angles between pixels with computation direction shown by arrows. Note that the columns matrix wraps around, i.\+e. the last element stores the difference in angles between the last pixel of the original image and the first one. 
+
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1AngleDiffPrecomputed_aeb86ee61c6e8fc1b5b554368b1f5fa27_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1AngleDiffPrecomputed_a2fd85404d06843af0ee5c713017f6641}\label{classdepth__clustering_1_1AngleDiffPrecomputed_a2fd85404d06843af0ee5c713017f6641}} 
+\index{depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}!Visualize@{Visualize}}
+\index{Visualize@{Visualize}!depth\_clustering::AngleDiffPrecomputed@{depth\_clustering::AngleDiffPrecomputed}}
+\doxysubsubsection{\texorpdfstring{Visualize()}{Visualize()}}
+{\footnotesize\ttfamily cv\+::\+Mat depth\+\_\+clustering\+::\+Angle\+Diff\+Precomputed\+::\+Visualize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Visualize $\beta$ angles as a {\ttfamily cv\+::\+Mat} color image. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily cv\+::\+Mat} color image with red channel showing $\beta$ angles in row direction and green channel in col direction. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classdepth__clustering_1_1AbstractDiff_a45314bf711f35e53590af28bdfc45313}{depth\+\_\+clustering\+::\+Abstract\+Diff}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/diff\+\_\+helpers/angle\+\_\+diff.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/image\+\_\+labelers/diff\+\_\+helpers/angle\+\_\+diff.\+cpp\end{DoxyCompactItemize}

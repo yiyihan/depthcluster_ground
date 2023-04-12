@@ -1,0 +1,137 @@
+\hypertarget{classdepth__clustering_1_1Cloud}{}\doxysection{depth\+\_\+clustering\+::Cloud Class Reference}
+\label{classdepth__clustering_1_1Cloud}\index{depth\_clustering::Cloud@{depth\_clustering::Cloud}}
+
+
+A class that stores a vector of Rich\+Points.  
+
+
+
+
+{\ttfamily \#include $<$cloud.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a6357719aeeb7c05cbd4a375f63526ba1}\label{classdepth__clustering_1_1Cloud_a6357719aeeb7c05cbd4a375f63526ba1}} 
+using {\bfseries Ptr} = shared\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_ae8ba86a4493a06d04e25cba4e97b9787}\label{classdepth__clustering_1_1Cloud_ae8ba86a4493a06d04e25cba4e97b9787}} 
+using {\bfseries Const\+Ptr} = shared\+\_\+ptr$<$ const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a00490840c02e90434727d71718323d11}\label{classdepth__clustering_1_1Cloud_a00490840c02e90434727d71718323d11}} 
+{\bfseries Cloud} (const \mbox{\hyperlink{classdepth__clustering_1_1Cloud}{Cloud}} \&cloud)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_abbb28f15b4cb992ef8c685d8ac74497c}\label{classdepth__clustering_1_1Cloud_abbb28f15b4cb992ef8c685d8ac74497c}} 
+{\bfseries Cloud} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&pose)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a16d2ddc6cf2af152c8e5ef2b71f059e4}\label{classdepth__clustering_1_1Cloud_a16d2ddc6cf2af152c8e5ef2b71f059e4}} 
+const Rich\+Point\+::\+Aligned\+Vector \& {\bfseries points} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a549f7235008ad6e404989ebb621d3d16}\label{classdepth__clustering_1_1Cloud_a549f7235008ad6e404989ebb621d3d16}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries pose} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a235dc6b26381d20d7cd57d80837e3f93}\label{classdepth__clustering_1_1Cloud_a235dc6b26381d20d7cd57d80837e3f93}} 
+const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries pose} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a8aeb9afd4c1b7da85f79f7eb2e4bd432}\label{classdepth__clustering_1_1Cloud_a8aeb9afd4c1b7da85f79f7eb2e4bd432}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries sensor\+\_\+pose} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_af671b5d52f019d532874e5189ba3d135}\label{classdepth__clustering_1_1Cloud_af671b5d52f019d532874e5189ba3d135}} 
+const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \& {\bfseries sensor\+\_\+pose} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a3cb61254a6c969d22810b2097f59b4cf}\label{classdepth__clustering_1_1Cloud_a3cb61254a6c969d22810b2097f59b4cf}} 
+void {\bfseries push\+\_\+back} (const \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \&point)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_ad716661e0b53d51df13576480714beef}\label{classdepth__clustering_1_1Cloud_ad716661e0b53d51df13576480714beef}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a6713820e4633e1f460c99e47e9aeaf96}\label{classdepth__clustering_1_1Cloud_a6713820e4633e1f460c99e47e9aeaf96}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_ac92794f086743a2fbc025c168d1ac846}\label{classdepth__clustering_1_1Cloud_ac92794f086743a2fbc025c168d1ac846}} 
+void {\bfseries reserve} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_aeb0d22cf0ace96f36d9f74f6bf9bfa47}\label{classdepth__clustering_1_1Cloud_aeb0d22cf0ace96f36d9f74f6bf9bfa47}} 
+\mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int idx)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_ae755d1933404025686e0f6d12c55ecf2}\label{classdepth__clustering_1_1Cloud_ae755d1933404025686e0f6d12c55ecf2}} 
+const \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int idx) const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a91cca0639df32d3b4ceed11e7baf8988}\label{classdepth__clustering_1_1Cloud_a91cca0639df32d3b4ceed11e7baf8988}} 
+\mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \& {\bfseries at} (int idx)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_aae9b5275a575fa233750553a5ce0e55a}\label{classdepth__clustering_1_1Cloud_aae9b5275a575fa233750553a5ce0e55a}} 
+const \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} \& {\bfseries at} (int idx) const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a2d25f4ec2e3d45016ecd7fa715273624}\label{classdepth__clustering_1_1Cloud_a2d25f4ec2e3d45016ecd7fa715273624}} 
+void {\bfseries Resize} (size\+\_\+t new\+\_\+size)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a2a5b5ba64b5e2cdfaf3f1418962fa93f}\label{classdepth__clustering_1_1Cloud_a2a5b5ba64b5e2cdfaf3f1418962fa93f}} 
+void {\bfseries Set\+Pose} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&pose)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a6ac41fa70ba489c0784b197350668ec4}\label{classdepth__clustering_1_1Cloud_a6ac41fa70ba489c0784b197350668ec4}} 
+const Cloud\+Projection\+::\+Const\+Ptr {\bfseries projection\+\_\+ptr} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_ac973b1445bd435f0f2df0dc06b654f07}\label{classdepth__clustering_1_1Cloud_ac973b1445bd435f0f2df0dc06b654f07}} 
+Cloud\+Projection\+::\+Ptr {\bfseries projection\+\_\+ptr} ()
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a8821b4a97d1f8b4e6415731f3e2b2f89}\label{classdepth__clustering_1_1Cloud_a8821b4a97d1f8b4e6415731f3e2b2f89}} 
+std\+::list$<$ const \mbox{\hyperlink{classdepth__clustering_1_1RichPoint}{Rich\+Point}} $\ast$ $>$ {\bfseries Points\+Projected\+To\+Pixel} (int row, int col) const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a448638dcb9f8e5a17370ba81e9e80d68}\label{classdepth__clustering_1_1Cloud_a448638dcb9f8e5a17370ba81e9e80d68}} 
+void {\bfseries Transform\+In\+Place} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&pose)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a93a9d173055f3a624db2fe4b1345eb13}\label{classdepth__clustering_1_1Cloud_a93a9d173055f3a624db2fe4b1345eb13}} 
+Cloud\+::\+Ptr {\bfseries Transform} (const \mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} \&pose) const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_abc1dcb82d072a45e8c00170cc927f537}\label{classdepth__clustering_1_1Cloud_abc1dcb82d072a45e8c00170cc927f537}} 
+void {\bfseries Set\+Projection\+Ptr} (typename Cloud\+Projection\+::\+Ptr proj\+\_\+ptr)
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a052108fe3780dec4209b80e8b7886457}\label{classdepth__clustering_1_1Cloud_a052108fe3780dec4209b80e8b7886457}} 
+void {\bfseries Init\+Projection} (const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a30f8b04595f44fc56d42f556efbebe7f}\label{classdepth__clustering_1_1Cloud_a30f8b04595f44fc56d42f556efbebe7f}} 
+static Cloud\+::\+Ptr {\bfseries From\+Image} (const cv\+::\+Mat \&image, const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} \&params)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a6827950219a447bb1d3c390168d3397d}\label{classdepth__clustering_1_1Cloud_a6827950219a447bb1d3c390168d3397d}} 
+Rich\+Point\+::\+Aligned\+Vector {\bfseries \+\_\+points}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a3b6a1ada445763ab4b9ac9519bb225f1}\label{classdepth__clustering_1_1Cloud_a3b6a1ada445763ab4b9ac9519bb225f1}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} {\bfseries \+\_\+pose}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a6399645406eaa1312ca4a469d7c4db1f}\label{classdepth__clustering_1_1Cloud_a6399645406eaa1312ca4a469d7c4db1f}} 
+\mbox{\hyperlink{classdepth__clustering_1_1Pose}{Pose}} {\bfseries \+\_\+sensor\+\_\+pose}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1Cloud_a5f60147c48b39a951d4fa72ba60ef370}\label{classdepth__clustering_1_1Cloud_a5f60147c48b39a951d4fa72ba60ef370}} 
+Cloud\+Projection\+::\+Ptr {\bfseries \+\_\+projection} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that stores a vector of Rich\+Points. 
+
+A utility class for storing points. If P\+CL is available has ways of converting to and from pcl. Also knows how to generate a projection from its points and can be generated from an image. 
+
+Collaboration diagram for depth\+\_\+clustering\+::Cloud\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classdepth__clustering_1_1Cloud__coll__graph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/cloud.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/utils/cloud.\+cpp\end{DoxyCompactItemize}

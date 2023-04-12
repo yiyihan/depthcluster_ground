@@ -1,0 +1,4 @@
+<map id="depth_clustering::CloudProjection::UnprojectPoint" name="depth_clustering::CloudProjection::UnprojectPoint">
+<area shape="rect" id="node1" title="Unproject a point from depth image coordinate." alt="" coords="264,5,481,47"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1RingProjection.html#a16cbf43e541e65560cb282c560b4efa7" title="Unproject a point from depth image coordinate." alt="" coords="5,5,216,47"/>
+</map>

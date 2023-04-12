@@ -1,0 +1,335 @@
+\hypertarget{classdepth__clustering_1_1ProjectionParams}{}\doxysection{depth\+\_\+clustering\+::Projection\+Params Class Reference}
+\label{classdepth__clustering_1_1ProjectionParams}\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+
+
+Class for projection parameters.  
+
+
+
+
+{\ttfamily \#include $<$projection\+\_\+params.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_ae2327e4c21c95f9931b8ae5a8c13fff0}\label{classdepth__clustering_1_1ProjectionParams_ae2327e4c21c95f9931b8ae5a8c13fff0}} 
+enum {\bfseries Set} \{ {\bfseries C\+O\+LS}, 
+{\bfseries R\+O\+WS}
+ \}
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a87a8f4be62d13697c9598a611f7a1d25}\label{classdepth__clustering_1_1ProjectionParams_a87a8f4be62d13697c9598a611f7a1d25}} 
+using {\bfseries Ptr} = shared\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_ad5f07311b2e51fde2850a27e8f518fdd}\label{classdepth__clustering_1_1ProjectionParams_ad5f07311b2e51fde2850a27e8f518fdd}} 
+using {\bfseries Const\+Ptr} = const shared\+\_\+ptr$<$ const \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_a0348997a7db34e534270d9a71619b8a9}{Set\+Span}} (const Span\+Params \&span\+\_\+params, const Span\+Params\+::\+Direction \&direction)
+\begin{DoxyCompactList}\small\item\em Set the angle span in a given direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_a6b21f0b17b1b1d38f8cb5b6990b4b0ec}{Set\+Span}} (const std\+::vector$<$ Span\+Params $>$ \&span\+\_\+params, const Span\+Params\+::\+Direction \&direction)
+\begin{DoxyCompactList}\small\item\em Set the angle spans in a given direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_af09fa571e57b30a789f05d1f16f94aaf}\label{classdepth__clustering_1_1ProjectionParams_af09fa571e57b30a789f05d1f16f94aaf}} 
+const Radians \& {\bfseries v\+\_\+start\+\_\+angle} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a4075e314684e058cc43ac063a2bb9061}\label{classdepth__clustering_1_1ProjectionParams_a4075e314684e058cc43ac063a2bb9061}} 
+const Radians \& {\bfseries v\+\_\+end\+\_\+angle} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a43a4f7f3b49eb5071f3c4bc121a0e049}\label{classdepth__clustering_1_1ProjectionParams_a43a4f7f3b49eb5071f3c4bc121a0e049}} 
+const Radians \& {\bfseries v\+\_\+span} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a191f8e2bc1f65a7906703979efcf2d91}\label{classdepth__clustering_1_1ProjectionParams_a191f8e2bc1f65a7906703979efcf2d91}} 
+const Radians \& {\bfseries h\+\_\+start\+\_\+angle} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_acfbdb0fde74b94b1eeef543a8e993028}\label{classdepth__clustering_1_1ProjectionParams_acfbdb0fde74b94b1eeef543a8e993028}} 
+const Radians \& {\bfseries h\+\_\+end\+\_\+angle} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a343c14dff436227958fcb8e942572824}\label{classdepth__clustering_1_1ProjectionParams_a343c14dff436227958fcb8e942572824}} 
+const Radians \& {\bfseries h\+\_\+span} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_ac2946ba352a7a50845510f9c2d7a8db6}\label{classdepth__clustering_1_1ProjectionParams_ac2946ba352a7a50845510f9c2d7a8db6}} 
+size\+\_\+t {\bfseries rows} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a3032c858ad3c2302a089c56d43f818a3}\label{classdepth__clustering_1_1ProjectionParams_a3032c858ad3c2302a089c56d43f818a3}} 
+size\+\_\+t {\bfseries cols} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a891cc1c1f8be0aa996f4caabfb13c39d}\label{classdepth__clustering_1_1ProjectionParams_a891cc1c1f8be0aa996f4caabfb13c39d}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+const Radians \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_adc48aa54d8c0c1da8167ab4001a83131}{Angle\+From\+Row}} (int row) const
+\begin{DoxyCompactList}\small\item\em Get angle from row. \end{DoxyCompactList}\item 
+const Radians \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_aa5cf587adef5383e263a4e9a20de50ff}{Angle\+From\+Col}} (int col) const
+\begin{DoxyCompactList}\small\item\em Get angle from col. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_ac9f61c77accaec1b6b60da0afe2dcf5e}{Row\+From\+Angle}} (const Radians \&angle) const
+\begin{DoxyCompactList}\small\item\em Get row number from angle. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_a76d3be24f6c166bc5567d622e4a4995b}{Col\+From\+Angle}} (const Radians \&angle) const
+\begin{DoxyCompactList}\small\item\em Get col number from angle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a24dd33536aa2ea35e02bd4b668a2578b}\label{classdepth__clustering_1_1ProjectionParams_a24dd33536aa2ea35e02bd4b668a2578b}} 
+const std\+::vector$<$ float $>$ \& {\bfseries Row\+Angle\+Cosines} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a122f60798443ec09dc89454455476d14}\label{classdepth__clustering_1_1ProjectionParams_a122f60798443ec09dc89454455476d14}} 
+const std\+::vector$<$ float $>$ \& {\bfseries Col\+Angle\+Cosines} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a6efbfbf9e5e1042989aafba2d72ec729}\label{classdepth__clustering_1_1ProjectionParams_a6efbfbf9e5e1042989aafba2d72ec729}} 
+const std\+::vector$<$ float $>$ \& {\bfseries Row\+Angle\+Sines} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a2403a21cba18bdbeb2763434a0e87aaf}\label{classdepth__clustering_1_1ProjectionParams_a2403a21cba18bdbeb2763434a0e87aaf}} 
+const std\+::vector$<$ float $>$ \& {\bfseries Col\+Angle\+Sines} () const
+\item 
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a80468245910fde0c730aa3431ccd7f46}\label{classdepth__clustering_1_1ProjectionParams_a80468245910fde0c730aa3431ccd7f46}} 
+bool {\bfseries valid} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_aef7c0d212f6ab8909d0992ed8c19a45d}{V\+L\+P\+\_\+16}} ()
+\begin{DoxyCompactList}\small\item\em Default parameters for 16 beam Velodyne. \end{DoxyCompactList}\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_a38a76a0e0f00f8f1b95b6108641703d6}{H\+D\+L\+\_\+32}} ()
+\begin{DoxyCompactList}\small\item\em Default parameters for 32 beam Velodyne. \end{DoxyCompactList}\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_a40b8a22533ec69811ef4d3d01fb04a85}{H\+D\+L\+\_\+64}} ()
+\begin{DoxyCompactList}\small\item\em Default parameters for 64 beam Velodyne. \end{DoxyCompactList}\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_a22a7d186bd32c86262e94843331230a1}{H\+D\+L\+\_\+64\+\_\+\+E\+Q\+U\+AL}} ()
+\begin{DoxyCompactList}\small\item\em Parameters for 64 beam velodyne assuming equal spacing between the lasers. \end{DoxyCompactList}\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_ad58dde41a515eda5871998da5435dc42}{From\+Config\+File}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Default parameters for Velodyne from config file. \end{DoxyCompactList}\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams_aa61906911995f0501dd03746b96d4c9c}{Full\+Sphere}} (const Radians \&discretization=5\+\_\+deg)
+\begin{DoxyCompactList}\small\item\em Default parameters to cover full sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for projection parameters. 
+
+Collaboration diagram for depth\+\_\+clustering\+::Projection\+Params\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classdepth__clustering_1_1ProjectionParams__coll__graph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_aa5cf587adef5383e263a4e9a20de50ff}\label{classdepth__clustering_1_1ProjectionParams_aa5cf587adef5383e263a4e9a20de50ff}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!AngleFromCol@{AngleFromCol}}
+\index{AngleFromCol@{AngleFromCol}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{AngleFromCol()}{AngleFromCol()}}
+{\footnotesize\ttfamily const Radians depth\+\_\+clustering\+::\+Projection\+Params\+::\+Angle\+From\+Col (\begin{DoxyParamCaption}\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Get angle from col. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em col} & The col\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle in radians 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1ProjectionParams_aa5cf587adef5383e263a4e9a20de50ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_adc48aa54d8c0c1da8167ab4001a83131}\label{classdepth__clustering_1_1ProjectionParams_adc48aa54d8c0c1da8167ab4001a83131}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!AngleFromRow@{AngleFromRow}}
+\index{AngleFromRow@{AngleFromRow}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{AngleFromRow()}{AngleFromRow()}}
+{\footnotesize\ttfamily const Radians depth\+\_\+clustering\+::\+Projection\+Params\+::\+Angle\+From\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Get angle from row. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em row} & The row\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle in radians 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1ProjectionParams_adc48aa54d8c0c1da8167ab4001a83131_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a76d3be24f6c166bc5567d622e4a4995b}\label{classdepth__clustering_1_1ProjectionParams_a76d3be24f6c166bc5567d622e4a4995b}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!ColFromAngle@{ColFromAngle}}
+\index{ColFromAngle@{ColFromAngle}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{ColFromAngle()}{ColFromAngle()}}
+{\footnotesize\ttfamily size\+\_\+t depth\+\_\+clustering\+::\+Projection\+Params\+::\+Col\+From\+Angle (\begin{DoxyParamCaption}\item[{const Radians \&}]{angle }\end{DoxyParamCaption}) const}
+
+
+
+Get col number from angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em angle} & The angle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Col number 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1ProjectionParams_a76d3be24f6c166bc5567d622e4a4995b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_ad58dde41a515eda5871998da5435dc42}\label{classdepth__clustering_1_1ProjectionParams_ad58dde41a515eda5871998da5435dc42}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!FromConfigFile@{FromConfigFile}}
+\index{FromConfigFile@{FromConfigFile}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{FromConfigFile()}{FromConfigFile()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ depth\+\_\+clustering\+::\+Projection\+Params\+::\+From\+Config\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default parameters for Velodyne from config file. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_aa61906911995f0501dd03746b96d4c9c}\label{classdepth__clustering_1_1ProjectionParams_aa61906911995f0501dd03746b96d4c9c}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!FullSphere@{FullSphere}}
+\index{FullSphere@{FullSphere}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{FullSphere()}{FullSphere()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ depth\+\_\+clustering\+::\+Projection\+Params\+::\+Full\+Sphere (\begin{DoxyParamCaption}\item[{const Radians \&}]{discretization = {\ttfamily 5\+\_\+deg} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default parameters to cover full sphere. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a38a76a0e0f00f8f1b95b6108641703d6}\label{classdepth__clustering_1_1ProjectionParams_a38a76a0e0f00f8f1b95b6108641703d6}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!HDL\_32@{HDL\_32}}
+\index{HDL\_32@{HDL\_32}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{HDL\_32()}{HDL\_32()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ depth\+\_\+clustering\+::\+Projection\+Params\+::\+H\+D\+L\+\_\+32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default parameters for 32 beam Velodyne. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a40b8a22533ec69811ef4d3d01fb04a85}\label{classdepth__clustering_1_1ProjectionParams_a40b8a22533ec69811ef4d3d01fb04a85}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!HDL\_64@{HDL\_64}}
+\index{HDL\_64@{HDL\_64}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{HDL\_64()}{HDL\_64()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ depth\+\_\+clustering\+::\+Projection\+Params\+::\+H\+D\+L\+\_\+64 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default parameters for 64 beam Velodyne. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a22a7d186bd32c86262e94843331230a1}\label{classdepth__clustering_1_1ProjectionParams_a22a7d186bd32c86262e94843331230a1}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!HDL\_64\_EQUAL@{HDL\_64\_EQUAL}}
+\index{HDL\_64\_EQUAL@{HDL\_64\_EQUAL}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{HDL\_64\_EQUAL()}{HDL\_64\_EQUAL()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ depth\+\_\+clustering\+::\+Projection\+Params\+::\+H\+D\+L\+\_\+64\+\_\+\+E\+Q\+U\+AL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parameters for 64 beam velodyne assuming equal spacing between the lasers. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_ac9f61c77accaec1b6b60da0afe2dcf5e}\label{classdepth__clustering_1_1ProjectionParams_ac9f61c77accaec1b6b60da0afe2dcf5e}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!RowFromAngle@{RowFromAngle}}
+\index{RowFromAngle@{RowFromAngle}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{RowFromAngle()}{RowFromAngle()}}
+{\footnotesize\ttfamily size\+\_\+t depth\+\_\+clustering\+::\+Projection\+Params\+::\+Row\+From\+Angle (\begin{DoxyParamCaption}\item[{const Radians \&}]{angle }\end{DoxyParamCaption}) const}
+
+
+
+Get row number from angle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em angle} & The angle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Row number 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classdepth__clustering_1_1ProjectionParams_ac9f61c77accaec1b6b60da0afe2dcf5e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a0348997a7db34e534270d9a71619b8a9}\label{classdepth__clustering_1_1ProjectionParams_a0348997a7db34e534270d9a71619b8a9}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!SetSpan@{SetSpan}}
+\index{SetSpan@{SetSpan}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{SetSpan()}{SetSpan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Projection\+Params\+::\+Set\+Span (\begin{DoxyParamCaption}\item[{const Span\+Params \&}]{span\+\_\+params,  }\item[{const Span\+Params\+::\+Direction \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Set the angle span in a given direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em span\+\_\+params} & The span parameters packad into \+::\+Span\+Params. \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & The direction. Must be one of Span\+Params\+::\+Direction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_a6b21f0b17b1b1d38f8cb5b6990b4b0ec}\label{classdepth__clustering_1_1ProjectionParams_a6b21f0b17b1b1d38f8cb5b6990b4b0ec}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!SetSpan@{SetSpan}}
+\index{SetSpan@{SetSpan}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{SetSpan()}{SetSpan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void depth\+\_\+clustering\+::\+Projection\+Params\+::\+Set\+Span (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Span\+Params $>$ \&}]{span\+\_\+params,  }\item[{const Span\+Params\+::\+Direction \&}]{direction }\end{DoxyParamCaption})}
+
+
+
+Set the angle spans in a given direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em span\+\_\+params} & The span parameters packad into \+::\+Span\+Params \\
+\hline
+\mbox{\texttt{ in}}  & {\em direction} & The direction. Must be one of Span\+Params\+::\+Direction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classdepth__clustering_1_1ProjectionParams_aef7c0d212f6ab8909d0992ed8c19a45d}\label{classdepth__clustering_1_1ProjectionParams_aef7c0d212f6ab8909d0992ed8c19a45d}} 
+\index{depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}!VLP\_16@{VLP\_16}}
+\index{VLP\_16@{VLP\_16}!depth\_clustering::ProjectionParams@{depth\_clustering::ProjectionParams}}
+\doxysubsubsection{\texorpdfstring{VLP\_16()}{VLP\_16()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classdepth__clustering_1_1ProjectionParams}{Projection\+Params}} $>$ depth\+\_\+clustering\+::\+Projection\+Params\+::\+V\+L\+P\+\_\+16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default parameters for 16 beam Velodyne. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to parameters 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/projections/projection\+\_\+params.\+h\item 
+/home/wyh/depthclustering/src/depth\+\_\+clustering/src/projections/projection\+\_\+params.\+cpp\end{DoxyCompactItemize}

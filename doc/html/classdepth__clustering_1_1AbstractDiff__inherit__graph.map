@@ -1,0 +1,8 @@
+<map id="depth_clustering::AbstractDiff" name="depth_clustering::AbstractDiff">
+<area shape="rect" id="node1" title="Class for abstract difference." alt="" coords="413,5,608,141"/>
+<area shape="rect" id="node2" href="$classdepth__clustering_1_1AngleDiff.html" title="Class for angle difference." alt="" coords="5,248,184,369"/>
+<area shape="rect" id="node3" href="$classdepth__clustering_1_1AngleDiffPrecomputed.html" title="Class for angle difference." alt="" coords="208,189,389,428"/>
+<area shape="rect" id="node4" href="$classdepth__clustering_1_1LineDistDiff.html" title="Class for line&#45;based difference. It is very alike to AngleDiff class, just that after we have compute..." alt="" coords="413,248,608,369"/>
+<area shape="rect" id="node5" href="$classdepth__clustering_1_1LineDistDiffPrecomputed.html" title="Class for angle difference." alt="" coords="633,189,821,428"/>
+<area shape="rect" id="node6" href="$classdepth__clustering_1_1SimpleDiff.html" title="Class for simple difference. Just substract two values." alt="" coords="845,255,1032,362"/>
+</map>
