@@ -22,10 +22,10 @@ url     = {https://link.springer.com/article/10.1007%2Fs41064-016-0003-y},
 }
 ```
 
-
+<!--
 The sudden occurred objects can be successfully detected:
 ![](doc/pics/unlabelled_obstacles_2.gif)
-while the detection results rely on the image segmentation performance while the models we use are not included in this repository.
+while the detection results rely on the image segmentation performance while the models we use are not included in this repository. -->
 
 ## Prerequisites ##
 I recommend using a virtual environment in your catkin workspace (`<catkin_ws>`
